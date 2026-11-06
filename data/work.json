@@ -3,20 +3,17 @@
     "unificado": [
       { "value": "17 anos", "label": "em Gestão Documental, Preservação Digital, RDC-Arq e Organização de Acervos" },
       { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Automação Documental e IA Aplicada" },
-      { "value": "Dr. & Me.", "label": "em Ciência da Informação (IBICT/UFRJ) + 2 Bacharelados (UNIRIO e Estácio)" },
-      { "value": "95% menor", "label": "bundle size e load time (0.5–1s) no Chatbot SEI com arquitetura RAG" }
+      { "value": "Dr. & Me.", "label": "em Ciência da Informação (IBICT/UFRJ) + 2 Bacharelados (UNIRIO e Estácio)" }
     ],
     "arquivista": [
       { "value": "17 anos", "label": "de atuação em Gestão de Documentos Eletrônicos, Preservação Digital e Acervos" },
       { "value": "Dr. & Me.", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" },
-      { "value": "Grandes Acervos", "label": "Petrobras, FIOCRUZ, IPHAN, UNESCO, Casa Civil-RJ, ANATEL, CASNAV e ECAD" },
       { "value": "RDC-Arq & IA", "label": "6 anos em Python e IA para automação documental própria e conformidade LGPD" }
     ],
     "dev": [
-      { "value": "95% menor", "label": "redução de bundle size e load time (3–5s → 0.5–1s) no Chatbot SEI" },
-      { "value": "500+ alunos", "label": "distribuídos automaticamente no Sistema CRC/1746 (FastAPI, React, 31 validações)" },
-      { "value": "Zero-Trust IA", "label": "motor de anonimização (redaction) LGPD em PDFs com Gemini 2.5 Flash Vision" },
-      { "value": "17 anos", "label": "de domínio de negócio em gestão documental, BPM e requisitos (GovTech/LegalTech)" }
+      { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Flask, Automação e IA Aplicada" },
+      { "value": "LLMs & RAG", "label": "Agentes Autônomos, Visão Computacional e Segurança Zero-Trust (LGPD)" },
+      { "value": "17 anos", "label": "de domínio de negócio em Gestão Documental, BPM e Requisitos (Dr. IBICT/UFRJ)" }
     ]
   },
   "sectionTitle": {
@@ -43,10 +40,10 @@
       "order": { "unificado": 2, "arquivista": 3, "dev": 2 },
       "company": "Prefeitura da Cidade do Rio de Janeiro",
       "year": "2025 – 2026",
-      "title": "Chatbot Institucional do SEI com Arquitetura RAG e Redução de 95% no Bundle",
-      "problem": "Servidores públicos precisavam consultar rapidamente normas e fluxos do manual oficial de gestão processual do Sistema Eletrônico de Informações (SEI) com baixa latência e alta acessibilidade.",
-      "approach": "Estruturação da base de conhecimento com 72 seções do manual oficial (11.395 palavras processadas) em arquitetura RAG integrada ao Google Gemini API, e migração do frontend de React para HTML5/CSS3/JS puro.",
-      "result": "Redução de 95% no bundle size, queda no tempo de carregamento de 3–5s para 0.5–1s e interface com acessibilidade WCAG 2.1 AA para suporte imediato à gestão processual.",
+      "title": "Chatbot Institucional do SEI com Arquitetura RAG e Base de Conhecimento Oficial",
+      "problem": "Servidores públicos precisavam consultar rapidamente normas e fluxos do manual oficial de gestão processual do Sistema Eletrônico de Informações (SEI) com alta precisão e acessibilidade.",
+      "approach": "Estruturação da base de conhecimento com 72 seções do manual oficial (11.395 palavras processadas) em arquitetura RAG integrada ao Google Gemini API, com interface leve em HTML5/CSS3/JS puro.",
+      "result": "Suporte imediato e preciso à gestão processual com carregamento abaixo de 1 segundo e conformidade de acessibilidade WCAG 2.1 AA.",
       "tags": ["Python", "RAG", "Google Gemini API", "SEI", "Gestão Processual", "HTML5/CSS3/JS", "WCAG 2.1 AA"]
     },
     {

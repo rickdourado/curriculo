@@ -372,8 +372,8 @@ h1 em {
 /* Stats e Destaques */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
   margin: 0 0 10vh;
   max-width: 1000px;
   padding: 26px 32px;
@@ -889,7 +889,7 @@ a:focus-visible, button:focus-visible {
     padding-bottom: 2pt;
   }
   .stats {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10pt;
     margin: 0 0 8pt;
     padding: 6pt 0;
