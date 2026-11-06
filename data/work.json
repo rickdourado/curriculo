@@ -7,13 +7,12 @@
     ],
     "arquivista": [
       { "value": "17 anos", "label": "de atuação em Gestão de Documentos Eletrônicos, Preservação Digital e Acervos" },
-      { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" },
-      { "value": "RDC-Arq & IA", "label": "6 anos em Python e IA para automação documental própria e conformidade LGPD" }
+      { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" }
     ],
     "dev": [
       { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Flask, Automação e IA Aplicada" },
-      { "value": "LLMs & RAG", "label": "Agentes Autônomos, Visão Computacional e Segurança Zero-Trust (LGPD)" },
-      { "value": "17 anos", "label": "de domínio de negócio em Gestão Documental, BPM e Requisitos (Doutor e Mestre IBICT/UFRJ)" }
+      { "value": "Tecnológo", "label": "em Análise e Desenvolvimento de Sistemas (Estácio de Sá)" }
+      
     ]
   },
   "sectionTitle": {
