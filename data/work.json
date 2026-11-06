@@ -1,28 +1,77 @@
 {
-  "stats": [
-    { "value": "6 weeks", "label": "to complete a major Rails and Ruby modernisation" },
-    { "value": "Large-scale", "label": "legacy monolith upgraded across several major releases" },
-    { "value": "Minutes → seconds", "label": "load time of a key customer dashboard" },
-    { "value": "0 → 25%+", "label": "test coverage introduced on a codebase that had none" }
-  ],
+  "stats": {
+    "unificado": [
+      { "value": "17 anos", "label": "em Gestão Documental, Preservação Digital, RDC-Arq e Organização de Acervos" },
+      { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Automação Documental e IA Aplicada" },
+      { "value": "Dr. & Me.", "label": "em Ciência da Informação (IBICT/UFRJ) + 2 Bacharelados (UNIRIO e Estácio)" },
+      { "value": "95% menor", "label": "bundle size e load time (0.5–1s) no Chatbot SEI com arquitetura RAG" }
+    ],
+    "arquivista": [
+      { "value": "17 anos", "label": "de atuação em Gestão de Documentos Eletrônicos, Preservação Digital e Acervos" },
+      { "value": "Dr. & Me.", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" },
+      { "value": "Grandes Acervos", "label": "Petrobras, FIOCRUZ, IPHAN, UNESCO, Casa Civil-RJ, ANATEL, CASNAV e ECAD" },
+      { "value": "RDC-Arq & IA", "label": "6 anos em Python e IA para automação documental própria e conformidade LGPD" }
+    ],
+    "dev": [
+      { "value": "95% menor", "label": "redução de bundle size e load time (3–5s → 0.5–1s) no Chatbot SEI" },
+      { "value": "500+ alunos", "label": "distribuídos automaticamente no Sistema CRC/1746 (FastAPI, React, 31 validações)" },
+      { "value": "Zero-Trust IA", "label": "motor de anonimização (redaction) LGPD em PDFs com Gemini 2.5 Flash Vision" },
+      { "value": "17 anos", "label": "de domínio de negócio em gestão documental, BPM e requisitos (GovTech/LegalTech)" }
+    ]
+  },
+  "sectionTitle": {
+    "unificado": "Destaques de Atuação",
+    "arquivista": "Destaques em Gestão Documental & Automação",
+    "dev": "Destaques em Engenharia de Software & IA"
+  },
   "caseStudies": [
     {
-      "company": "Education technology company",
-      "year": "2026",
-      "title": "A long-lived monolith, modernised in six weeks",
-      "problem": "A large Rails platform had fallen several major framework and language versions behind, making ongoing development harder and riskier.",
-      "approach": "I led the work with one other engineer and a fleet of parallel AI coding agents. We split the migration into small, backwards-compatible changes, merged continuously, and used CI to validate each step.",
-      "result": "Completed the upgrade through several major Rails and Ruby releases in six weeks, then rolled the modernised stack out across production.",
-      "tags": ["Ruby on Rails", "Ruby", "AI coding agents", "CI", "Multi-agent orchestration"]
+      "id": "lgpd-redaction",
+      "profiles": ["unificado", "arquivista", "dev"],
+      "order": { "unificado": 1, "arquivista": 1, "dev": 1 },
+      "company": "Prefeitura da Cidade do Rio de Janeiro",
+      "year": "2025 – 2026",
+      "title": "Motor de Anonimização (Redaction) de Contratos com Visão Computacional e LGPD",
+      "problem": "Necessidade de proteger dados pessoais e sigilosos (CPF, CNPJ, nomes) em contratos e documentos administrativos em PDF, garantindo estrita conformidade com a LGPD.",
+      "approach": "União do conhecimento arquivístico de sigilo documental à arquitetura de segurança zero-trust em Python, combinando processamento offline de PDFs com a API Google Gemini 2.5 Flash Vision.",
+      "result": "Sistema automatizado de análise de contratos e anonimização precisa de informações sensíveis em documentos públicos, unindo governança arquivística e IA de ponta.",
+      "tags": ["Python", "Google Gemini 2.5 Flash Vision", "LGPD", "Sigilo Documental", "Visão Computacional", "Zero-Trust", "PyMuPDF"]
     },
     {
-      "company": "Early-stage fintech",
-      "year": "2025–2026",
-      "title": "A slow customer dashboard, reduced from minutes to seconds",
-      "problem": "A key customer dashboard took minutes to load and sometimes failed, on a codebase with little automated coverage.",
-      "approach": "I profiled the application, rewrote slow queries, moved heavy panels to asynchronous loading, right-sized the infrastructure, and introduced system tests.",
-      "result": "Brought load times down to a few seconds, established meaningful automated test coverage, and improved the reliability of core financial workflows.",
-      "tags": ["Ruby on Rails", "Performance", "Fintech", "State machines", "System tests"]
+      "id": "sei-rag-chatbot",
+      "profiles": ["unificado", "dev", "arquivista"],
+      "order": { "unificado": 2, "arquivista": 3, "dev": 2 },
+      "company": "Prefeitura da Cidade do Rio de Janeiro",
+      "year": "2025 – 2026",
+      "title": "Chatbot Institucional do SEI com Arquitetura RAG e Redução de 95% no Bundle",
+      "problem": "Servidores públicos precisavam consultar rapidamente normas e fluxos do manual oficial de gestão processual do Sistema Eletrônico de Informações (SEI) com baixa latência e alta acessibilidade.",
+      "approach": "Estruturação da base de conhecimento com 72 seções do manual oficial (11.395 palavras processadas) em arquitetura RAG integrada ao Google Gemini API, e migração do frontend de React para HTML5/CSS3/JS puro.",
+      "result": "Redução de 95% no bundle size, queda no tempo de carregamento de 3–5s para 0.5–1s e interface com acessibilidade WCAG 2.1 AA para suporte imediato à gestão processual.",
+      "tags": ["Python", "RAG", "Google Gemini API", "SEI", "Gestão Processual", "HTML5/CSS3/JS", "WCAG 2.1 AA"]
+    },
+    {
+      "id": "rdc-arq-petrobras-jae",
+      "profiles": ["unificado", "arquivista", "dev"],
+      "order": { "unificado": 3, "arquivista": 2, "dev": 4 },
+      "company": "Petrobras (via Rivic), Safe Conversão Digital & Jaé",
+      "year": "2022 – 2025",
+      "title": "Instrumentos Arquivísticos, Sistemas RDC-Arq e Automação Documental em Larga Escala",
+      "problem": "Demanda por conformidade normativa (RDC-Arq), criação de instrumentos de gestão documental e tratamento automatizado de grandes acervos digitais em operações críticas.",
+      "approach": "Elaboração de Planos de Classificação, Tabelas de Temporalidade e Padrões de Metadados aliada ao desenvolvimento em Python e .NET de geradores de metadados, análise de CSV e separação de PDFs via OCR (Tesseract) e Fuzzy Matching.",
+      "result": "Governança documental completa combinada à automação da inserção de papel timbrado, renomeação padronizada em massa, controle de conformidade em Power BI e relatórios automáticos de pendências.",
+      "tags": ["RDC-Arq", "Plano de Classificação", "Tabela de Temporalidade", "Preservação Digital", "Python", "OCR & FuzzyWuzzy", "Power BI"]
+    },
+    {
+      "id": "patrimonio-unesco-fiocruz",
+      "profiles": ["unificado", "arquivista"],
+      "order": { "unificado": 4, "arquivista": 4, "dev": 5 },
+      "company": "IPHAN, UNESCO, FIOCRUZ, Casa Civil-RJ & ANATEL",
+      "year": "2009 – 2021",
+      "title": "Gestão Documental, Preservação de Acervos e Mapeamento de Processos em Instituições de Referência",
+      "problem": "Organizar acervos históricos e institucionais complexos, definir políticas de preservação e especificar requisitos para modernização de sistemas de gestão do processo digital.",
+      "approach": "Desenvolvimento de Quadros de Arranjo, Vocabulários Controlados, Planos de Classificação, Tabelas de Temporalidade e Planos de Descarte, além de mapeamento de processos (BPM/BizAgi) e levantamento de requisitos funcionais.",
+      "result": "Instrumentos arquivísticos e requisitos de sistemas consolidados para o Centro Lúcio Costa (IPHAN/UNESCO), FIOCRUZ, Casa Civil-RJ, ANATEL, CASNAV e ECAD.",
+      "tags": ["Gestão Documental", "Quadro de Arranjo", "Vocabulário Controlado", "BPM / BizAgi", "Requisitos de Sistema", "UNESCO / IPHAN", "FIOCRUZ"]
     }
   ]
 }

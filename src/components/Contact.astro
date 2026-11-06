@@ -1,5 +1,7 @@
 ---
 import profile from "../../data/profile.json";
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <section class="section contact" id="contact">
@@ -7,6 +9,27 @@ import profile from "../../data/profile.json";
   <p>{profile.contact.text}</p>
   <div class="ctas">
     <a class="btn primary" href={`mailto:${profile.email}`}>{profile.email}</a>
-    {profile.links.map((link) => <a class="btn" href={link.url}>{link.label}</a>)}
+    <a class="btn" href={`tel:${profile.phone.replace(/\s+/g, "")}`}>{profile.phone}</a>
+    {
+      profile.links.map((link) => (
+        <a class="btn" href={link.url} target="_blank" rel="noopener noreferrer">
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+  <div class="contact-pdfs">
+    <span>Versões em PDF para download direto:</span>
+    <a href={`${baseUrl}/cv-arquivista.pdf`} download="Patrick-Ribeiro-Curriculo-Arquivista-Senior.pdf">
+      CV Arquivista Sênior
+    </a>
+    <span aria-hidden="true">·</span>
+    <a href={`${baseUrl}/cv-dev-python.pdf`} download="Patrick-Ribeiro-Curriculo-Dev-Python-Junior.pdf">
+      CV Dev Python & IA
+    </a>
+    <span aria-hidden="true">·</span>
+    <a href={`${baseUrl}/cv.pdf`} download="Patrick-Ribeiro-Curriculo-Unificado.pdf">
+      CV Unificado
+    </a>
   </div>
 </section>

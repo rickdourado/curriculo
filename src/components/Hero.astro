@@ -1,25 +1,93 @@
 ---
 import profile from "../../data/profile.json";
 
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 const names = profile.name.split(" ");
 const given = names[0];
 const family = names[names.length - 1];
 const middle = names.slice(1, -1).join(" ");
-const printContact = [profile.location, profile.email, ...profile.links.map((link) => link.url.replace(/^https?:\/\/(www\.)?/, "")), "www.estevaom.com"];
+
+const profileList = [
+  profile.profiles.unificado,
+  profile.profiles.arquivista,
+  profile.profiles.dev,
+] as const;
+
+const printContact = [
+  profile.location,
+  profile.phone,
+  profile.email,
+  "linkedin.com/in/rickribeiro",
+  "github.com/rickdourado",
+  `${profile.nationality} · ${profile.travelAvailability}`,
+];
 ---
 
 <section class="hero" id="top">
   <div class="hero-copy">
-    <p class="eyebrow">
-      {profile.headline.map((part, i) => <Fragment><span>{i < profile.headline.length - 1 ? `${part} ·` : part}</span>{" "}</Fragment>)}
-    </p>
-    <h1>{given} <em>{middle}</em> {family}</h1>
-    <p class="lede">{profile.lede}</p>
-    <p class="print-only print-contact">{printContact.join(" · ")}</p>
-    <p class="availability"><span class="dot"></span>{profile.availability}</p>
-    <div class="ctas">
-      <a class="btn primary" href={`mailto:${profile.email}`}>Start a conversation</a>
-      <a class="btn" href="/cv.pdf" download="Estevao-Machado-CV.pdf">Download CV</a>
+    <div class="profile-selector" role="group" aria-label="Escolha a lente de leitura do currículo">
+      <p class="selector-label">Selecione o foco do perfil:</p>
+      <div class="selector-cards">
+        {
+          profileList.map((p) => (
+            <button
+              type="button"
+              class={`selector-card selector-${p.id}`}
+              data-set-profile={p.id}
+              aria-pressed={p.id === "unificado" ? "true" : "false"}
+            >
+              <span class="selector-title">{p.label}</span>
+              <span class="selector-sub">{p.subtitle}</span>
+            </button>
+          ))
+        }
+      </div>
     </div>
+
+    {
+      profileList.map((p) => (
+        <div class="profile-block" data-for-profile={p.id}>
+          <p class="eyebrow">
+            {p.headline.map((part, i) => (
+              <Fragment>
+                <span>{i < p.headline.length - 1 ? `${part} ·` : part}</span>{" "}
+              </Fragment>
+            ))}
+          </p>
+        </div>
+      ))
+    }
+
+    <h1>{given} <em>{middle}</em> {family}</h1>
+
+    <p class="print-only print-contact">{printContact.join(" · ")}</p>
+
+    {
+      profileList.map((p) => (
+        <div class="profile-block" data-for-profile={p.id}>
+          <p class="lede">{p.lede}</p>
+          <p class="emphasis-banner">
+            <span class="emphasis-dot" aria-hidden="true" />
+            <span>{p.emphasisNote}</span>
+          </p>
+          <p class="availability">
+            <span class="dot" />
+            {p.availability}
+          </p>
+          <div class="ctas">
+            <a class="btn primary" href={`mailto:${profile.email}`}>Entrar em contato</a>
+            <a class="btn" href={`${baseUrl}/${p.pdfFile}`} download={p.pdfDownloadName}>
+              {p.pdfButtonLabel}
+            </a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/rickribeiro" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a class="btn ghost" href="https://github.com/rickdourado" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>

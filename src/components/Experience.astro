@@ -3,36 +3,170 @@ import employment from "../../data/employment.json";
 import profile from "../../data/profile.json";
 import skills from "../../data/skills.json";
 
-const { education } = profile;
+const profileIds = ["unificado", "arquivista", "dev"] as const;
+const arqEdu = profile.education.filter((e) => e.category === "arquivologia");
+const techEdu = profile.education.filter((e) => e.category === "tecnologia");
 ---
 
 <section class="section" id="experience">
-  <h2>Experience</h2>
+  <div class="section-header-row">
+    <h2>Experiência Profissional</h2>
+    <div class="profile-block" data-for-profile="unificado">
+      <p class="section-subtitle">
+        Trajetória completa (2008 – 2026) integrando Gestão Documental, Ciência da Informação e Desenvolvimento de Software.
+      </p>
+    </div>
+    <div class="profile-block" data-for-profile="arquivista">
+      <p class="section-subtitle">
+        Todas as experiências exibidas com ênfase em Gestão Documental, Preservação Digital, RDC-Arq e Instrumentos Arquivísticos.
+      </p>
+    </div>
+    <div class="profile-block" data-for-profile="dev">
+      <p class="section-subtitle">
+        Todas as experiências exibidas com ênfase em Engenharia de Software, Python, FastAPI, IA Aplicada e Domínio de Negócio.
+      </p>
+    </div>
+  </div>
+
   <ol class="timeline">
     {
       employment.map((job) => (
-        <li>
-          <p class="when">{job.dates}</p>
-          <div>
-            <h3 class="role">{job.role} <span class="at">at {job.company}</span></h3>
-            <p class="where">{job.where}</p>
-            <p class="what">{job.summary}</p>
+        <li
+          class="timeline-item"
+          data-focus-arquivista={job.focus.includes("arquivista") ? "true" : "false"}
+          data-focus-dev={job.focus.includes("dev") ? "true" : "false"}
+        >
+          <div class="when-col">
+            <p class="when">{job.dates}</p>
+            {profileIds.map((pid) => (
+              <span class="profile-block domain-badge" data-for-profile={pid}>
+                {job.domainBadge[pid]}
+              </span>
+            ))}
+          </div>
+
+          <div class="role-col">
+            {profileIds.map((pid) => (
+              <div class="profile-block" data-for-profile={pid}>
+                <h3 class="role">
+                  {job.role[pid]} <span class="at">· {job.company}</span>
+                </h3>
+                <p class="where">{job.where}</p>
+                <ul class="what-list">
+                  {job.bullets[pid].map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {job.note && <p class="job-note">{job.note}</p>}
+
+            <ul class="tags compact-tags">
+              {job.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
           </div>
         </li>
       ))
     }
   </ol>
-  <p class="edu"><em>Education</em> {education.degree}, {education.school}, {education.year}</p>
 
-  <h2 class="sub">Tools I reach for</h2>
-  <div class="skills">
-    {
-      skills.map((group) => (
-        <div>
-          <h3>{group.group}</h3>
-          <ul class="tags">{group.items.map((item) => <li>{item}</li>)}</ul>
+  <h2 class="sub" id="education">Formação Acadêmica & Idiomas</h2>
+
+  {
+    profileIds.map((pid) => {
+      const groups =
+        pid === "dev"
+          ? [
+              {
+                title: "Formação em Tecnologia",
+                badge: "Graduação Principal Tech",
+                items: techEdu,
+              },
+              {
+                title: "Formação Complementar em Ciência da Informação e Arquivologia (Diferencial de Domínio)",
+                badge: "Doutorado & Mestrado IBICT/UFRJ",
+                items: arqEdu,
+              },
+            ]
+          : [
+              {
+                title: "Formação em Ciência da Informação e Arquivologia",
+                badge: "Doutorado, Mestrado, Especialização & Graduação",
+                items: arqEdu,
+              },
+              {
+                title:
+                  pid === "arquivista"
+                    ? "Formação Complementar em Tecnologia (Diferencial Competitivo)"
+                    : "Formação em Tecnologia & Desenvolvimento de Sistemas",
+                badge: "Engenharia de Software & IA",
+                items: techEdu,
+              },
+            ];
+
+      return (
+        <div class="profile-block edu-grid" data-for-profile={pid}>
+          {groups.map((grp) => (
+            <div class="edu-card">
+              <div class="edu-card-header">
+                <h3>{grp.title}</h3>
+                <span class="edu-badge">{grp.badge}</span>
+              </div>
+              <ul class="edu-list">
+                {grp.items.map((ed) => (
+                  <li>
+                    <span class="edu-year">{ed.year}</span>
+                    <div>
+                      <strong>{ed.degree}</strong>
+                      <p>{ed.school}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div class="edu-card edu-languages">
+            <div class="edu-card-header">
+              <h3>Idiomas</h3>
+              <span class="edu-badge">Certificação Internacional</span>
+            </div>
+            <ul class="edu-list lang-list">
+              {profile.languages.map((lang) => (
+                <li>
+                  <strong>{lang.language}</strong>
+                  <p>{lang.level}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      ))
-    }
-  </div>
+      );
+    })
+  }
+
+  <h2 class="sub" id="skills">Competências Técnicas</h2>
+
+  {
+    profileIds.map((pid) => (
+      <div class="profile-block skills" data-for-profile={pid}>
+        {skills[pid].map((group) => (
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <h3>{group.group}</h3>
+              <span class="skill-badge">{group.badge}</span>
+            </div>
+            <ul class="tags">
+              {group.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    ))
+  }
 </section>

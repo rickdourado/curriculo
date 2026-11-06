@@ -1,56 +1,22 @@
-# estevaom.github.io
+# Patrick Dourado Ribeiro — Currículo Interativo
 
-[![Website](https://img.shields.io/badge/website-estevaom.com-1f305e)](https://www.estevaom.com)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-rickdourado.github.io%2Fcurriculo-1f305e)](https://rickdourado.github.io/curriculo/)
 
-<p align="center">
-  <img src="./.github/images/screenshot.jpg" width="80%" />
-</p>
+Landing page interativa e currículo de **Patrick Dourado Ribeiro** — **Doutor em Ciência da Informação (IBICT/UFRJ)**, **Arquivista Sênior (17 anos de experiência)** e **Desenvolvedor Python & Especialista em IA (6 anos de experiência)**.
 
-My personal site and CV. The Starry Night theme is a live painting: the sky is laid down once
-with a few thousand flow-field brushstrokes, a few hundred more keep drifting along the same
-currents, and the hills and cypress sink away as you scroll up into the sky.
+## Lentes de Perfil Interativas
+
+A página permite alternar de forma fluida entre três visões complementares (inclusive por parâmetros de URL para envio direto a recrutadores):
+
+- **Visão Unificada (Padrão)**: `https://rickdourado.github.io/curriculo/` — Integra a trajetória completa em Ciência da Informação, Arquivologia e Engenharia de Software/IA.
+- **Arquivista Sênior**: `https://rickdourado.github.io/curriculo/?perfil=arquivista` — Ênfase em Gestão Documental, Preservação Digital, RDC-Arq e grandes acervos (Petrobras, FIOCRUZ, IPHAN, UNESCO, Casa Civil-RJ, ANATEL, ECAD), apresentando Python e IA como diferencial competitivo.
+- **Dev Python & IA**: `https://rickdourado.github.io/curriculo/?perfil=dev` — Ênfase em Desenvolvimento Python, FastAPI, Flask, LLMs, RAG, Agentes Autônomos e Visão Computacional, apresentando os 17 anos em Gestão Documental e Doutorado como diferencial de domínio de negócio (GovTech/LegalTech).
+
+Cada perfil também conta com sua versão dedicada em PDF gerada automaticamente no build (`cv.pdf`, `cv-arquivista.pdf` e `cv-dev-python.pdf`).
 
 ## Stack
 
-- **[Astro](https://astro.build)**: the page is rendered to static HTML at build time, so the content
-  is readable without JavaScript, by search engines and by link previews.
-- **Canvas 2D** for the painting, in plain JavaScript (`src/scripts/starry-night.js`), no dependencies.
-- **Bun** for installing, building and scripts.
-- **Playwright** renders the CV PDF and the link-preview image from the built page.
-- **GitHub Pages**, deployed by GitHub Actions on every push to `master`.
-
-## Layout
-
-```
-data/                 Content, the single source of truth
-  profile.json        Name, headline, availability, contact, education
-  work.json           Headline stats and case studies
-  employment.json     Timeline
-  skills.json         Tools, grouped
-  projects.json       Open-source repos (star counts are fetched at build time)
-src/
-  pages/index.astro   The page, assembled from the components below
-  components/         One component per section, plus StarryNight (the canvases)
-  scripts/            The painting engine
-  styles/global.css   Layout, the Starry Night tokens, and the print stylesheet (the CV)
-  themes.ts           The list of themes; the toggle appears once there is more than one
-scripts/snapshots.mjs Writes dist/cv.pdf and dist/og.jpg from the built site
-```
-
-## Development
-
-```bash
-bun install
-bun run dev          # http://localhost:4321, add ?hud to see the painting's frame rate
-bun run check        # type-check
-bun run build        # static site in dist/
-bun run snapshots    # dist/cv.pdf and dist/og.jpg (needs a build first)
-```
-
-`snapshots` uses Playwright's Chromium (`bunx playwright install chromium`), or a system one via
-`CHROMIUM_PATH=/usr/bin/chromium bun run snapshots`.
-
-## Editing content
-
-Change the JSON in `data/`, then check it with `bun run dev`. Everything on the page, including the
-printed CV, comes from those files.
+- **[Astro](https://astro.build)**: geração estática de alta performance.
+- **Canvas 2D (`src/scripts/starry-night.js`)**: pintura animada *Starry Night* em JavaScript puro, com transições sutis de paleta conforme o perfil selecionado.
+- **Playwright (`scripts/snapshots.mjs`)**: gera automaticamente os PDFs de cada perfil (`cv.pdf`, `cv-arquivista.pdf`, `cv-dev-python.pdf`) e a imagem OpenGraph (`og.jpg`).
+- **GitHub Actions + GitHub Pages**: deploy automatizado a cada push na branch `master`/`main`.

@@ -1,51 +1,500 @@
 [
   {
-    "role": "Tech Lead",
-    "company": "Education technology company",
-    "dates": "2026 – now",
-    "where": "Remote from Brisbane",
-    "summary": "Led a major Rails and Ruby modernisation across a large, long-lived platform. Now bringing the surrounding applications up to date and introducing modern frontend and component patterns."
+    "id": "prefeitura-rio",
+    "dates": "08/2025 – 08/2026",
+    "company": "Prefeitura da Cidade do Rio de Janeiro",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista", "dev"],
+    "domainBadge": {
+      "unificado": "IA · Python · Gestão Documental & LGPD",
+      "arquivista": "Automação Documental · LGPD · SEI",
+      "dev": "Destaque Tech · Python · FastAPI · IA & RAG"
+    },
+    "role": {
+      "unificado": "Desenvolvedor Python / Especialista em Inteligência Artificial",
+      "arquivista": "Desenvolvedor Python / Especialista em Inteligência Artificial",
+      "dev": "Desenvolvedor Python / Especialista em Inteligência Artificial"
+    },
+    "bullets": {
+      "unificado": [
+        "Desenvolveu sistemas em Python com Inteligência Artificial e automação documental aplicados a serviços públicos digitais para o cidadão carioca.",
+        "Construiu sistema de análise de contratos com visão computacional e segurança zero-trust: motor de anonimização (redaction) offline de dados sigilosos (CPF, CNPJ, nomes) em PDFs, integrado à API Google Gemini 2.5 Flash Vision e em conformidade com a LGPD, combinando conhecimento arquivístico de sigilo documental com IA.",
+        "Desenvolveu módulo conversor e padronizador de formulários administrativos legados (AS-IS para TO-BE) com agentes de IA contextuais no padrão wizard responsivo de 4 etapas, unindo princípios de gestão documental e UX.",
+        "Construiu Sistema de Gestão de Treinamentos (CRC/1746) em FastAPI, React e TypeScript: automatizou a criação de turmas e distribuição de mais de 500 alunos, com 10 routers modulares, 31 validações de negócio críticas e dashboard administrativo em tempo real.",
+        "Implementou chatbot inteligente institucional para o Sistema Eletrônico de Informações (SEI) com arquitetura RAG sobre base de conhecimento de 72 seções do manual oficial de gestão processual (11.395 palavras processadas) e Google Gemini API.",
+        "Migrou frontend do chatbot de React para HTML5/CSS3/JavaScript puro, reduzindo o bundle size em 95% e o tempo de carregamento de 3–5s para 0.5–1s, com acessibilidade WCAG 2.1 AA.",
+        "Desenvolveu sistema web de cadastro e gestão de cursos em FastAPI com geração automática de CSV e PDF (ReportLab, Jinja2) e banco MariaDB via SQLAlchemy e Alembic."
+      ],
+      "arquivista": [
+        "Aplicou Inteligência Artificial e automação documental a serviços públicos digitais para o cidadão carioca.",
+        "Desenvolveu sistema de análise de contratos com motor de anonimização (redaction) de dados sigilosos (CPF, CNPJ, nomes) em documentos PDF, em conformidade com a LGPD, combinando conhecimento arquivístico de sigilo documental com visão computacional (Google Gemini 2.5 Flash Vision).",
+        "Estruturou módulo de padronização e modernização de formulários administrativos legados, aplicando princípios de gestão documental e experiência do usuário.",
+        "Automatizou a Gestão de Treinamentos (CRC/1746): criação de turmas e distribuição de mais de 500 alunos, com dashboard administrativo de acompanhamento em tempo real.",
+        "Implementou chatbot institucional (Sistema Eletrônico de Informações - SEI) com base de conhecimento estruturada a partir do manual oficial de gestão processual."
+      ],
+      "dev": [
+        "Desenvolveu sistemas em Python com Inteligência Artificial aplicados a serviços públicos digitais para o cidadão carioca.",
+        "Construiu sistema de análise de contratos com visão computacional e segurança zero-trust: motor de anonimização (redaction) offline de dados sigilosos (CPF, CNPJ, nomes) em PDFs, integrado à API Google Gemini 2.5 Flash Vision, em conformidade com a LGPD.",
+        "Desenvolveu módulo conversor de formulários legados (AS-IS para TO-BE) com agentes de IA contextuais, estruturando formulários responsivos no padrão wizard de 4 etapas.",
+        "Construiu Sistema de Gestão de Treinamentos (CRC/1746) em FastAPI, React e TypeScript: automatizou a criação de turmas e distribuição de mais de 500 alunos, com 10 routers modulares, 31 validações de negócio críticas e dashboard administrativo em tempo real.",
+        "Implementou chatbot inteligente para o Sistema Eletrônico de Informações (SEI) com arquitetura RAG sobre base de conhecimento de 72 seções do manual oficial (11.395 palavras processadas) e integração com Google Gemini API.",
+        "Migrou frontend do chatbot de React para HTML5/CSS3/JavaScript puro, reduzindo o bundle size em 95% e o tempo de carregamento de 3–5s para 0.5–1s; interface com acessibilidade WCAG 2.1 AA.",
+        "Desenvolveu sistema web de cadastro e gestão de cursos em FastAPI com geração automática de CSV e PDF (ReportLab, Jinja2) e banco MariaDB via SQLAlchemy e Alembic."
+      ]
+    },
+    "tags": ["Python", "FastAPI", "Flask", "React", "TypeScript", "Google Gemini API", "RAG", "LGPD", "SEI", "SQLAlchemy", "Alembic", "MariaDB", "SQLite", "Tailwind CSS"]
   },
   {
-    "role": "Founding Engineer",
-    "company": "Early-stage fintech",
-    "dates": "2025 – 2026",
-    "where": "Fintech startup · remote",
-    "summary": "Improved application performance and reliability, established automated test coverage, and helped develop core fintech workflows. Led a UI redesign through an AI-assisted delivery process."
+    "id": "jae-cbd",
+    "dates": "01/2025 – 03/2025",
+    "company": "Jaé - CBD Transportes (Grupo Conecta)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista", "dev"],
+    "domainBadge": {
+      "unificado": "Python · .NET · Preservação Digital & OCR",
+      "arquivista": "Gestão Documental · Preservação Digital · OCR",
+      "dev": "Destaque Tech · Python · .NET · OCR & FuzzyWuzzy"
+    },
+    "role": {
+      "unificado": "Desenvolvedor .NET e Python",
+      "arquivista": "Desenvolvedor .NET e Python",
+      "dev": "Desenvolvedor .NET e Python"
+    },
+    "bullets": {
+      "unificado": [
+        "Desenvolveu em Python e .NET Framework sistemas de gestão, preservação digital de documentos e apoio à operação de transportes do Rio de Janeiro.",
+        "Criou sistema de inserção automática de papel timbrado em PDFs com autenticação via Firebase, geração de metadados e renomeação padronizada de documentos em massa.",
+        "Desenvolveu sistema de análise automatizada de CSV com detecção de inconsistências e geração de planilhas de pendências.",
+        "Implementou separador automático de PDFs por conteúdo/frases-chave com Fuzzy Matching (FuzzyWuzzy) e OCR (Tesseract), aplicado à organização documental em larga escala."
+      ],
+      "arquivista": [
+        "Desenvolveu sistemas de gestão e preservação digital de documentos para operações de transportes do Rio de Janeiro.",
+        "Automatizou inserção de papel timbrado, geração de metadados e renomeação padronizada de documentos em massa.",
+        "Criou sistema de separação automática de PDFs por conteúdo com Fuzzy Matching e OCR, aplicado à organização documental em larga escala."
+      ],
+      "dev": [
+        "Desenvolveu em Python e .NET Framework sistemas de apoio à operação de transportes do Rio de Janeiro.",
+        "Criou sistema de inserção automática de papel timbrado em PDFs com autenticação via Firebase.",
+        "Desenvolveu sistema de análise automatizada de CSV com detecção de inconsistências e geração de planilhas de pendências.",
+        "Implementou gerador de metadados, aplicativo de renomeação em massa de PDFs e separador automático de documentos por frases-chave com Fuzzy Matching (FuzzyWuzzy) e OCR (Tesseract)."
+      ]
+    },
+    "note": "Motivo de saída: encerramento das atividades da Jaé, com dissolução do time de desenvolvimento.",
+    "tags": ["Python", ".NET Framework", "Gestão de Documentos", "Preservação Digital", "FuzzyWuzzy", "OCR Tesseract", "Firebase", "Tkinter", "GitHub"]
   },
   {
-    "role": "Engineering Lead",
-    "company": "Education technology company",
-    "dates": "2023 – 2025",
-    "where": "Remote from Brisbane",
-    "summary": "Led a squad responsible for a large, long-running Rails platform. Helped drive the organisation's AI adoption through talks, workshops, and an agent-assisted upgrade workflow."
+    "id": "safe-conversao",
+    "dates": "10/2024 – 12/2024",
+    "company": "Safe Conversão Digital (Grupo Conecta)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista", "dev"],
+    "domainBadge": {
+      "unificado": "RDC-Arq · Requisitos Técnicos · Python & Power BI",
+      "arquivista": "Destaque Arquivologia · Sistemas RDC-Arq & Digitalização",
+      "dev": "Automação Python · Power BI · Engenharia de Requisitos"
+    },
+    "role": {
+      "unificado": "Especialista em Requisitos Técnicos e Sistemas RDC-Arq",
+      "arquivista": "Especialista em Requisitos Técnicos e Sistemas RDC-Arq",
+      "dev": "Especialista em Requisitos Técnicos (com foco em automação Python)"
+    },
+    "bullets": {
+      "unificado": [
+        "Responsável pelo levantamento de requisitos técnicos de digitalização e acompanhamento da implementação de sistemas RDC-Arq e gestão documental eletrônica em projetos de clientes governamentais.",
+        "Aplicou Python e Microsoft Power BI na geração automatizada de metadados e no controle de conformidade de processos de digitalização."
+      ],
+      "arquivista": [
+        "Responsável pelos requisitos técnicos de digitalização e pelos sistemas RDC-Arq em projetos de clientes governamentais.",
+        "Acompanhou a implementação de sistemas de gestão documental eletrônica em clientes do setor público.",
+        "Aplicou Python e Power BI na geração de metadados e no controle de conformidade de processos de digitalização."
+      ],
+      "dev": [
+        "Levantou requisitos técnicos de digitalização e apoiou a implementação de sistemas (RDC-Arq) para clientes governamentais.",
+        "Aplicou Python e Power BI na geração automatizada de metadados e no controle de conformidade de processos."
+      ]
+    },
+    "note": "Motivo de saída: transferência interna para a Jaé, empresa do mesmo grupo.",
+    "tags": ["RDC-Arq", "Python", "Microsoft Power BI", "Análise de Requisitos", "Gerenciamento de Arquivos", "Desenvolvimento de Software"]
   },
   {
-    "role": "Senior Software Engineer",
-    "company": "Reinteractive",
-    "dates": "2017 – 2023",
-    "where": "Rails consultancy · remote",
-    "summary": "Kept 20+ enterprise client apps healthy under the Code Care program, raised their test coverage to 90%+, and consulted for clients including PwC and nib. Ran technical interviews as the team grew."
+    "id": "rivic-petrobras",
+    "dates": "02/2022 – 05/2024",
+    "company": "Rivic Gestão da Informação (Projeto Petrobras)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista", "dev"],
+    "domainBadge": {
+      "unificado": "Gestão Documental Petrobras · Python & Power BI",
+      "arquivista": "Destaque Arquivologia · Gestão Documental Petrobras",
+      "dev": "Automação Python · Análise de Dados & Sistemas"
+    },
+    "role": {
+      "unificado": "Arquivista / Desenvolvedor",
+      "arquivista": "Arquivista / Desenvolvedor",
+      "dev": "Arquivista / Desenvolvedor"
+    },
+    "bullets": {
+      "unificado": [
+        "Executou gestão documental eletrônica, classificação, descrição, indexação de documentos, manutenção de sistemas de gestão documental e atendimento aos usuários da Petrobras.",
+        "Desenvolveu Plano de Classificação, Tabela de Temporalidade e Padrão de Metadados institucionais.",
+        "Desenvolveu em Python sistema de análise automatizada de arquivos CSV com geração de relatórios de pendências."
+      ],
+      "arquivista": [
+        "Executou gestão documental eletrônica e atendimento aos usuários da Petrobras.",
+        "Realizou classificação, descrição e indexação de documentos, além de manutenção de sistemas de gestão documental.",
+        "Desenvolveu Plano de Classificação, Tabela de Temporalidade e Padrão de Metadados institucionais.",
+        "Automatizou em Python a análise de arquivos CSV com geração de relatórios de pendências."
+      ],
+      "dev": [
+        "Desenvolveu em Python sistema de análise de arquivos CSV com geração automatizada de relatórios de pendências.",
+        "Atuou na gestão documental eletrônica e manutenção de sistemas de gestão de documentos para a Petrobras.",
+        "Aplicou pensamento estruturado na criação de Planos de Classificação, Tabelas de Temporalidade e Padrões de Metadados."
+      ]
+    },
+    "tags": ["Python", "Gestão Documental", "Plano de Classificação", "Tabela de Temporalidade", "Metadados", "Microsoft Power BI", "Desenvolvimento de Software"]
   },
   {
-    "role": "Senior Software Engineer",
-    "company": "DashBid",
-    "dates": "2015 – 2017",
-    "where": "Ad tech, New York · remote",
-    "summary": "Built customer dashboards and documented REST APIs, and fed the production database from Redshift and Treasure Data. Ran the team's scrums and retrospectives."
+    "id": "fiocruz-2019",
+    "dates": "10/2019 – 01/2021",
+    "company": "Fundação Oswaldo Cruz (FIOCRUZ)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Acervos · Repositórios Digitais · Bases de Dados",
+      "arquivista": "Destaque Arquivologia · Repositórios Digitais & Acervos",
+      "dev": "Bases de Dados & Repositórios Digitais"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista (Bases de Dados e Repositórios Digitais)"
+    },
+    "bullets": {
+      "unificado": [
+        "Executou gestão documental, descrição e organização de acervos pessoais.",
+        "Realizou manutenção de bases de dados e repositórios digitais, estruturando dados que serviram de base para atuação em automação.",
+        "Desenvolveu Quadro de Arranjo, vocabulário controlado e documentação classificada e indexada."
+      ],
+      "arquivista": [
+        "Executou gestão documental, descrição e organização de acervos pessoais.",
+        "Realizou manutenção de bases de dados e repositórios digitais.",
+        "Desenvolveu Quadro de Arranjo, vocabulário controlado e documentação classificada e indexada."
+      ],
+      "dev": [
+        "Atuou na manutenção de bases de dados e repositórios digitais e na organização de acervos pessoais, consolidando base prática para atuação posterior em automação e engenharia de dados.",
+        "Estruturou vocabulário controlado, Quadro de Arranjo e indexação sistemática de registros."
+      ]
+    },
+    "tags": ["Repositórios Digitais", "Bases de Dados", "Quadro de Arranjo", "Vocabulário Controlado", "Gestão Documental"]
   },
   {
-    "role": "Software Engineer",
-    "company": "XL Solutions",
-    "dates": "2012 – 2015",
-    "where": "Rio de Janeiro",
-    "summary": "Built e-commerce for Brazil's largest phone carriers, a real-time auction platform, and marketplaces with millions of items on Elasticsearch. Ported legacy apps from Rails 2.3 to Rails 4."
+    "id": "capes-doutorado",
+    "dates": "03/2016 – 09/2019",
+    "company": "CAPES — Doutorado Acadêmico (IBICT/UFRJ)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Pesquisa Científica · Preservação Digital",
+      "arquivista": "Doutorado em Ciência da Informação",
+      "dev": "Pesquisa Analítica & Escrita Técnica"
+    },
+    "role": {
+      "unificado": "Doutorando em Ciência da Informação (Bolsista CAPES)",
+      "arquivista": "Doutorando em Ciência da Informação (Bolsista CAPES)",
+      "dev": "Doutorando em Ciência da Informação (Bolsista CAPES)"
+    },
+    "bullets": {
+      "unificado": [
+        "Dedicação exclusiva ao Doutorado em Ciência da Informação (IBICT/UFRJ) como bolsista CAPES, com pesquisa aplicada à gestão da informação, preservação digital, pensamento analítico e metodologia científica."
+      ],
+      "arquivista": [
+        "Dedicação exclusiva ao Doutorado em Ciência da Informação (IBICT/UFRJ) como bolsista CAPES, com pesquisa aplicada à gestão da informação e preservação digital."
+      ],
+      "dev": [
+        "Dedicação exclusiva à pesquisa acadêmica em Ciência da Informação (IBICT/UFRJ), desenvolvendo pensamento analítico, metodologia de pesquisa e escrita técnica."
+      ]
+    },
+    "tags": ["Ciência da Informação", "Preservação Digital", "Pesquisa Científica", "IBICT/UFRJ"]
   },
   {
-    "role": "Software Engineer",
-    "company": "Hands",
-    "dates": "2007 – 2012",
-    "where": "Rio de Janeiro",
-    "summary": "Released Brazil's first mobile portal the same day the first iPhone launched, and led the codebase's migration from C# to Ruby on Rails. On the side, founded Kissy, a dating app that launched before Tinder."
+    "id": "iphan-2015",
+    "dates": "01/2015 – 05/2017",
+    "company": "Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Gestão Documental · Requisitos de Sistema · Power BI",
+      "arquivista": "Destaque Arquivologia · Acervos & Requisitos de Sistema",
+      "dev": "Domínio de Negócio · Requisitos Funcionais & Power BI"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista (Requisitos Funcionais de Sistema)"
+    },
+    "bullets": {
+      "unificado": [
+        "Gestão Documental, descrição e indexação de acervos institucionais.",
+        "Desenvolveu Requisitos Funcionais de Sistema para modernização de processos arquivísticos com apoio de Microsoft Power BI."
+      ],
+      "arquivista": [
+        "Gestão Documental, descrição e indexação de acervos institucionais.",
+        "Desenvolveu Requisitos Funcionais de Sistema para modernização de processos arquivísticos."
+      ],
+      "dev": [
+        "Desenvolveu Requisitos Funcionais de Sistema para modernização e informatização de processos arquivísticos.",
+        "Atuou na estruturação, descrição e indexação de dados de acervos institucionais utilizando Microsoft Power BI."
+      ]
+    },
+    "tags": ["Requisitos de Sistema", "Desenvolvimento de Software", "Gestão Documental", "Microsoft Power BI", "Pensamento Crítico"]
+  },
+  {
+    "id": "casa-civil-rj",
+    "dates": "08/2013 – 05/2014",
+    "company": "Secretaria de Estado da Casa Civil — Subsecretaria de Gestão do Processo Digital",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Processo Digital · BPM / BizAgi · Requisitos",
+      "arquivista": "Destaque Arquivologia · Gestão do Processo Digital",
+      "dev": "Domínio de Negócio · BPM (BizAgi) & Requisitos de Sistema"
+    },
+    "role": {
+      "unificado": "Arquivista / Analista de Processos",
+      "arquivista": "Arquivista / Analista de Processos",
+      "dev": "Arquivista / Analista de Processos (BPM & Requisitos)"
+    },
+    "bullets": {
+      "unificado": [
+        "Gestão Documental, análise de requisitos e mapeamento de processos de negócio (BPM com BizAgi) na Subsecretaria de Gestão do Processo Digital.",
+        "Desenvolveu Requisitos de Sistema, Plano de Classificação e Tabela de Temporalidade."
+      ],
+      "arquivista": [
+        "Gestão Documental, análise de requisitos e mapeamento de processos de negócio.",
+        "Desenvolveu Requisitos de Sistema, Plano de Classificação e Tabela de Temporalidade."
+      ],
+      "dev": [
+        "Realizou análise de requisitos de sistema e mapeamento de processos de negócio (BPM) com a ferramenta BizAgi para a Subsecretaria de Gestão do Processo Digital.",
+        "Estruturou regras de negócio, Plano de Classificação, Tabela de Temporalidade e gestão de mudanças."
+      ]
+    },
+    "tags": ["BPM / BizAgi", "Análise de Requisitos", "Processo Digital", "Plano de Classificação", "Tabela de Temporalidade", "Gestão de Mudanças"]
+  },
+  {
+    "id": "iphan-unesco",
+    "dates": "01/2013 – 08/2013",
+    "company": "Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN) e UNESCO",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Cooperação Internacional · UNESCO & IPHAN",
+      "arquivista": "Destaque Arquivologia · Consultoria Internacional UNESCO",
+      "dev": "Domínio de Negócio · Gestão de Projetos & Documentação Técnica"
+    },
+    "role": {
+      "unificado": "Consultor Internacional",
+      "arquivista": "Consultor Internacional",
+      "dev": "Consultor Internacional (Gestão de Projetos & Estruturação Documental)"
+    },
+    "bullets": {
+      "unificado": [
+        "Classificação, avaliação e preservação de documentos em projeto de cooperação internacional IPHAN/UNESCO.",
+        "Elaborou Relatórios de Consultoria, Plano de Classificação, Tabela de Temporalidade e Plano de Descarte do Centro Lúcio Costa."
+      ],
+      "arquivista": [
+        "Classificação, avaliação e preservação de documentos em projeto de cooperação internacional.",
+        "Elaborou Relatórios de Consultoria, Plano de Classificação, Tabela de Temporalidade e Plano de Descarte do Centro Lúcio Costa."
+      ],
+      "dev": [
+        "Atuou em projeto de cooperação internacional (IPHAN/UNESCO) com gestão de projetos, estruturação normativa e documentação técnica do Centro Lúcio Costa.",
+        "Elaborou Relatórios de Consultoria, Plano de Classificação, Tabela de Temporalidade e Plano de Descarte."
+      ]
+    },
+    "tags": ["Consultoria Internacional", "UNESCO", "Gestão de Projetos", "Plano de Classificação", "Tabela de Temporalidade", "Relatórios Técnicos"]
+  },
+  {
+    "id": "casnav",
+    "dates": "06/2012 – 09/2012",
+    "company": "CASNAV — Centro de Análises de Sistemas Navais",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Instrumentos Arquivísticos · Marinha do Brasil",
+      "arquivista": "Classificação, Avaliação & Temporalidade",
+      "dev": "Domínio de Negócio · Taxonomia & Regras de Retenção"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista"
+    },
+    "bullets": {
+      "unificado": [
+        "Classificação, avaliação e preservação de documentos.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade do CASNAV."
+      ],
+      "arquivista": [
+        "Classificação, avaliação e preservação de documentos.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade do CASNAV."
+      ],
+      "dev": [
+        "Estruturou regras de classificação, avaliação e temporalidade documental (Plano de Classificação e Tabela de Temporalidade) no Centro de Análises de Sistemas Navais."
+      ]
+    },
+    "tags": ["Plano de Classificação", "Tabela de Temporalidade", "Avaliação Documental"]
+  },
+  {
+    "id": "dba-anatel",
+    "dates": "07/2011 – 03/2012",
+    "company": "DBA Engenharia de Sistemas (Projeto ANATEL)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Consultoria Arquivística · ANATEL",
+      "arquivista": "Plano de Classificação & Temporalidade ANATEL",
+      "dev": "Domínio de Negócio · Engenharia de Sistemas & Dados"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista"
+    },
+    "bullets": {
+      "unificado": [
+        "Classificação, avaliação e preservação de documentos.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade da Agência Nacional de Telecomunicações (ANATEL)."
+      ],
+      "arquivista": [
+        "Classificação, avaliação e preservação de documentos.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade da Agência Nacional de Telecomunicações (ANATEL)."
+      ],
+      "dev": [
+        "Desenvolveu o Plano de Classificação e a Tabela de Temporalidade da Agência Nacional de Telecomunicações (ANATEL) junto à DBA Engenharia de Sistemas."
+      ]
+    },
+    "tags": ["ANATEL", "Plano de Classificação", "Tabela de Temporalidade", "Preservação Documental"]
+  },
+  {
+    "id": "fiocruz-2010",
+    "dates": "08/2010 – 03/2011",
+    "company": "Fundação Oswaldo Cruz (FIOCRUZ)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Classificação Institucional · FIOCRUZ",
+      "arquivista": "Plano de Classificação Institucional",
+      "dev": "Domínio de Negócio · Organização da Informação"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista"
+    },
+    "bullets": {
+      "unificado": [
+        "Classificação e organização do acervo físico.",
+        "Desenvolveu Plano de Classificação institucional."
+      ],
+      "arquivista": [
+        "Classificação e organização do acervo físico.",
+        "Desenvolveu Plano de Classificação institucional."
+      ],
+      "dev": [
+        "Classificação, organização de acervo e desenvolvimento de Plano de Classificação institucional na FIOCRUZ."
+      ]
+    },
+    "tags": ["FIOCRUZ", "Plano de Classificação", "Organização de Acervos"]
+  },
+  {
+    "id": "fiocruz-estagio-2010",
+    "dates": "02/2010 – 07/2010",
+    "company": "Fundação Oswaldo Cruz (FIOCRUZ)",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Pesquisa & Quadro de Arranjo · FIOCRUZ",
+      "arquivista": "Pesquisa em Acervos Pessoais",
+      "dev": "Pesquisa & Estruturação de Acervo"
+    },
+    "role": {
+      "unificado": "Estagiário / Pesquisador",
+      "arquivista": "Estagiário / Pesquisador",
+      "dev": "Estagiário / Pesquisador"
+    },
+    "bullets": {
+      "unificado": [
+        "Pesquisa e organização do acervo pessoal da enfermeira Virgínia Portocarrero.",
+        "Desenvolveu Quadro de Arranjo do acervo."
+      ],
+      "arquivista": [
+        "Pesquisa e organização do acervo pessoal da enfermeira Virgínia Portocarrero.",
+        "Desenvolveu Quadro de Arranjo do acervo."
+      ],
+      "dev": [
+        "Pesquisa, organização e desenvolvimento do Quadro de Arranjo do acervo pessoal de Virgínia Portocarrero na FIOCRUZ."
+      ]
+    },
+    "tags": ["Quadro de Arranjo", "Pesquisa em Arquivos", "Acervos Pessoais"]
+  },
+  {
+    "id": "ecad",
+    "dates": "02/2009 – 03/2010",
+    "company": "ECAD — Escritório Central de Arrecadação e Distribuição",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Gestão de Acervo Nacional · ECAD",
+      "arquivista": "Plano de Classificação & Temporalidade ECAD",
+      "dev": "Domínio de Negócio · Gestão de Acervos"
+    },
+    "role": {
+      "unificado": "Arquivista",
+      "arquivista": "Arquivista",
+      "dev": "Arquivista"
+    },
+    "bullets": {
+      "unificado": [
+        "Organização e manutenção do acervo, com atendimento a usuários da unidade e de outras unidades no Brasil.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade."
+      ],
+      "arquivista": [
+        "Organização e manutenção do acervo, com atendimento a usuários da unidade e de outras unidades no Brasil.",
+        "Desenvolveu Plano de Classificação e Tabela de Temporalidade."
+      ],
+      "dev": [
+        "Organização de acervo de abrangência nacional e desenvolvimento de Plano de Classificação e Tabela de Temporalidade no ECAD."
+      ]
+    },
+    "tags": ["ECAD", "Plano de Classificação", "Tabela de Temporalidade", "Gestão de Acervos"]
+  },
+  {
+    "id": "tempo-glauber",
+    "dates": "01/2008 – 01/2009",
+    "company": "Associação de Amigos do Tempo Glauber",
+    "where": "Rio de Janeiro, RJ",
+    "focus": ["arquivista"],
+    "domainBadge": {
+      "unificado": "Acervo Cultural & Base de Dados",
+      "arquivista": "Quadro de Arranjo & Acervo Cultural",
+      "dev": "Base de Dados & Descrição Documental"
+    },
+    "role": {
+      "unificado": "Estagiário / Arquivista",
+      "arquivista": "Estagiário / Arquivista",
+      "dev": "Estagiário / Arquivista"
+    },
+    "bullets": {
+      "unificado": [
+        "Elaboração de Quadro de Arranjo, descrição e alimentação de base de dados.",
+        "Higienização documental de acervo cultural."
+      ],
+      "arquivista": [
+        "Elaboração de Quadro de Arranjo, descrição e alimentação de base de dados.",
+        "Higienização documental de acervo cultural."
+      ],
+      "dev": [
+        "Elaboração de Quadro de Arranjo, descrição padronizada e alimentação de base de dados de acervo cultural."
+      ]
+    },
+    "tags": ["Quadro de Arranjo", "Base de Dados", "Descrição Documental", "Patrimônio Cultural"]
   }
 ]

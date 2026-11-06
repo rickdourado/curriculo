@@ -1,20 +1,37 @@
-[
-  {
-    "name": "trackwatch",
-    "repo": "estevaom/trackwatch",
-    "description": "A terminal music visualiser with pixelated album art and synchronised lyrics.",
-    "language": "Rust"
+{
+  "sectionTitle": {
+    "unificado": "Projetos Técnicos & Sistemas Desenvolvidos",
+    "arquivista": "Sistemas de Automação Documental & Projetos",
+    "dev": "Projetos Técnicos Selecionados"
   },
-  {
-    "name": "markdown-journal-rust",
-    "repo": "estevaom/markdown-journal-rust",
-    "description": "Semantic search and RAG over a markdown journal, built for Claude Code to query.",
-    "language": "Rust"
-  },
-  {
-    "name": "linux-wiim",
-    "repo": "estevaom/linux-wiim",
-    "description": "Control WiiM streamers from Linux, with Plex and Tidal.",
-    "language": "Python"
-  }
-]
+  "items": [
+    {
+      "name": "Sistema ATS — Conversor e Otimizador de Currículos",
+      "category": "Flask · Processamento de PDF",
+      "description": "Ferramenta web desenvolvida em Flask com upload de PDF, extração e análise de texto (PyPDF2, PyMuPDF, Regex) e otimização automática de currículos para compatibilidade com sistemas ATS. Interface em HTML5, CSS3, JavaScript e Bootstrap 5, hospedada em PythonAnywhere.",
+      "tags": ["Python", "Flask", "PyPDF2", "PyMuPDF", "Regex", "Bootstrap 5", "PythonAnywhere"],
+      "url": "https://github.com/rickdourado"
+    },
+    {
+      "name": "Sistema de Gestão de Treinamentos — CRC (1746 · Pref.rio)",
+      "category": "FastAPI · React · TypeScript",
+      "description": "Backend em FastAPI, SQLite, SQLAlchemy e Alembic; frontend em React, TypeScript e Tailwind CSS. Automação completa de criação de turmas e distribuição de mais de 500 alunos, com 10 routers modulares, 31 validações de negócio críticas e dashboard em tempo real.",
+      "tags": ["FastAPI", "React", "TypeScript", "SQLAlchemy", "Alembic", "SQLite", "Tailwind CSS"],
+      "url": "https://github.com/rickdourado"
+    },
+    {
+      "name": "Sistema de Acompanhamento de Implementação de Projetos",
+      "category": "FastAPI · Supabase · React",
+      "description": "Aplicação full-stack com backend em FastAPI e Supabase (autenticação JWT, Pydantic) e frontend em React, Vite, Chakra UI e React Query. Inclui CRUD completo de documentos, sistema de filtros avançados e dashboard interativo de gestão.",
+      "tags": ["FastAPI", "Supabase", "JWT", "Pydantic", "React", "Chakra UI", "React Query"],
+      "url": "https://github.com/rickdourado"
+    },
+    {
+      "name": "ChatWhatsApp — Simulação de Atendimento e Interface Mobile",
+      "category": "React · UX Conversacional",
+      "description": "Interface de chat simulada em React e Vite com Tailwind CSS, sistema de navegação por árvore de conversação dinâmica em JSON e detecção inteligente de palavras-chave, com experiência mobile responsiva.",
+      "tags": ["React", "Vite", "Tailwind CSS", "JSON", "UX Mobile"],
+      "url": "https://github.com/rickdourado"
+    }
+  ]
+}

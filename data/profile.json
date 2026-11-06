@@ -1,25 +1,114 @@
 {
-  "name": "Estevão de Abreu Machado",
-  "shortName": "Estevão Machado",
-  "initials": "EM",
-  "headline": ["Tech Lead", "15+ years of Ruby on Rails", "AI agent orchestration"],
-  "lede": "I modernise legacy Rails systems by orchestrating fleets of AI coding agents. Recently, that meant taking a large, long-lived monolith through several major Rails and Ruby upgrades in six weeks.",
-  "description": "Tech Lead with 15+ years of Ruby on Rails. I modernise legacy Rails systems by orchestrating fleets of AI coding agents. Based in Brisbane, available for consulting.",
-  "location": "Brisbane, Australia",
-  "timezone": "AEST",
-  "availability": "Brisbane · available for consulting",
-  "email": "estevaom@gmail.com",
+  "name": "Patrick Dourado Ribeiro",
+  "shortName": "Patrick Ribeiro",
+  "initials": "PR",
+  "location": "Rio de Janeiro, RJ - Brasil",
+  "phone": "+55 21 99527-4518",
+  "email": "patrick.ribeiro@gmail.com",
+  "nationality": "Brasileiro",
+  "travelAvailability": "Disponibilidade para viagens",
   "links": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/estevaom" },
-    { "label": "GitHub", "url": "https://github.com/estevaom" }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rickribeiro" },
+    { "label": "GitHub", "url": "https://github.com/rickdourado" },
+    { "label": "WhatsApp", "url": "https://wa.me/5521995274518" }
   ],
-  "contact": {
-    "title": "Let's talk",
-    "text": "I'm available for consulting, or to make one hard problem go away. I'm in Brisbane (AEST)."
+  "profiles": {
+    "unificado": {
+      "id": "unificado",
+      "label": "Visão Unificada",
+      "shortLabel": "Unificado",
+      "subtitle": "Arquivologia Sênior + Dev Python & IA",
+      "headline": [
+        "Arquivista Sênior (17 anos)",
+        "Desenvolvedor Python & IA (6 anos)",
+        "Doutor em Ciência da Informação"
+      ],
+      "roleTitle": "Arquivista Sênior & Desenvolvedor Python / Especialista em IA",
+      "lede": "Uno 17 anos de experiência em Gestão de Documentos Eletrônicos, Preservação Digital e RDC-Arq em grandes instituições (Petrobras, FIOCRUZ, IPHAN, UNESCO) a 6 anos de Desenvolvimento Python e Inteligência Artificial — projetando e implementando sistemas completos de automação documental, LLMs, RAG, visão computacional e conformidade com a LGPD.",
+      "description": "Currículo interativo de Patrick Dourado Ribeiro — Doutor em Ciência da Informação (IBICT/UFRJ), Arquivista Sênior (17 anos) e Desenvolvedor Python & IA (FastAPI, Flask, LLMs, RAG, Visão Computacional).",
+      "availability": "Rio de Janeiro, RJ · Disponibilidade para viagens · Inglês Proficiente (TOEFL)",
+      "pdfFile": "cv.pdf",
+      "pdfDownloadName": "Patrick-Ribeiro-Curriculo-Unificado.pdf",
+      "pdfButtonLabel": "Baixar CV Completo (PDF)",
+      "emphasisNote": "Mostrando a trajetória integrada: como a base científica e arquivística potencializa a engenharia de software e IA."
+    },
+    "arquivista": {
+      "id": "arquivista",
+      "label": "Arquivista Sênior",
+      "shortLabel": "Arquivista",
+      "subtitle": "17 anos · Gestão Documental & RDC-Arq",
+      "headline": [
+        "Arquivista Sênior",
+        "17 anos em Gestão Documental & Preservação Digital",
+        "Doutor em Ciência da Informação (IBICT/UFRJ)"
+      ],
+      "roleTitle": "Arquivista Sênior · Doutor em Ciência da Informação",
+      "lede": "Arquivista Sênior com 17 anos de experiência em Gestão de Documentos Eletrônicos, Preservação Digital, Classificação e Indexação Documental e Organização de Acervos em instituições públicas e privadas de grande porte (Petrobras, FIOCRUZ, IPHAN, Secretaria de Estado da Casa Civil-RJ, UNESCO, ECAD). Diferencial competitivo: 6 anos de experiência complementar em Desenvolvimento Python e IA, permitindo projetar e implementar pessoalmente sistemas de automação documental, digitalização, RDC-Arq e conformidade com a LGPD.",
+      "description": "Patrick Dourado Ribeiro — Arquivista Sênior com 17 anos de experiência, Doutor e Mestre em Ciência da Informação (IBICT/UFRJ), com diferencial em Automação Documental com Python e IA.",
+      "availability": "Rio de Janeiro, RJ · Arquivista Sênior · Disponibilidade para viagens · Inglês Proficiente (TOEFL)",
+      "pdfFile": "cv-arquivista.pdf",
+      "pdfDownloadName": "Patrick-Ribeiro-Curriculo-Arquivista-Senior.pdf",
+      "pdfButtonLabel": "Baixar CV Arquivista Sênior (PDF)",
+      "emphasisNote": "Ênfase em Arquivologia, Gestão Documental, RDC-Arq e Preservação Digital — apresentando a tecnologia como diferencial competitivo."
+    },
+    "dev": {
+      "id": "dev",
+      "label": "Dev Python & IA",
+      "shortLabel": "Dev Python",
+      "subtitle": "FastAPI · Flask · LLMs, RAG & Automação",
+      "headline": [
+        "Desenvolvedor Python Júnior",
+        "FastAPI · Flask · LLMs, RAG & Visão Computacional",
+        "17 anos de Domínio em Negócios & LGPD"
+      ],
+      "roleTitle": "Desenvolvedor Python & Especialista em Inteligência Artificial",
+      "lede": "Desenvolvedor Python Júnior com experiência prática aplicando Python, FastAPI, Flask e Inteligência Artificial (LLMs, Agentes Autônomos de IA, RAG, Visão Computacional) na construção de sistemas de automação, chatbots inteligentes e ferramentas de gestão para o setor público. Diferencial competitivo: 17 anos de vivência em Gestão de Documentos Eletrônicos e Arquivologia, com Doutorado e Mestrado em Ciência da Informação pelo IBICT/UFRJ — agregando domínio profundo de regras de negócio, compliance LGPD, BPM e engenharia de requisitos para GovTech e LegalTech.",
+      "description": "Patrick Dourado Ribeiro — Desenvolvedor Python & IA (FastAPI, Flask, LLMs, RAG, React) com Doutorado em Ciência da Informação e 17 anos de domínio em regras de negócio e LGPD.",
+      "availability": "Rio de Janeiro, RJ · Dev Python & IA · Disponibilidade para viagens · Inglês Proficiente (TOEFL)",
+      "pdfFile": "cv-dev-python.pdf",
+      "pdfDownloadName": "Patrick-Ribeiro-Curriculo-Dev-Python-Junior.pdf",
+      "pdfButtonLabel": "Baixar CV Dev Python (PDF)",
+      "emphasisNote": "Ênfase em Engenharia de Software, Python, FastAPI e Inteligência Artificial — apresentando a Arquivologia como diferencial de domínio de negócio."
+    }
   },
-  "education": {
-    "degree": "B.A. Computer Science & Project Management",
-    "school": "Universidade Gama Filho, Rio de Janeiro",
-    "year": "2009"
-  }
+  "contact": {
+    "title": "Vamos conversar?",
+    "text": "Estou disponível para oportunidades como Arquivista Sênior, Desenvolvedor Python / IA ou projetos que conectem Gestão da Informação e Tecnologia. Baseado no Rio de Janeiro, com disponibilidade para viagens e atuação remota ou presencial."
+  },
+  "education": [
+    {
+      "degree": "Doutorado em Ciência da Informação",
+      "school": "Instituto Brasileiro de Informação em Ciência e Tecnologia / Universidade Federal do Rio de Janeiro (IBICT/UFRJ)",
+      "year": "2021 – 2022",
+      "category": "arquivologia"
+    },
+    {
+      "degree": "Mestrado em Ciência da Informação",
+      "school": "Instituto Brasileiro de Informação em Ciência e Tecnologia / Universidade Federal do Rio de Janeiro (IBICT/UFRJ)",
+      "year": "2011 – 2013",
+      "category": "arquivologia"
+    },
+    {
+      "degree": "Especialização em Preservação do Patrimônio Cultural das Ciências e da Saúde",
+      "school": "Fundação Oswaldo Cruz (FIOCRUZ)",
+      "year": "2010 – 2011",
+      "category": "arquivologia"
+    },
+    {
+      "degree": "Bacharelado em Arquivologia",
+      "school": "Universidade Federal do Estado do Rio de Janeiro (UNIRIO)",
+      "year": "2004 – 2008",
+      "category": "arquivologia"
+    },
+    {
+      "degree": "Bacharelado em Análise e Desenvolvimento de Sistemas",
+      "school": "Universidade Estácio de Sá",
+      "year": "2022 – 2024",
+      "category": "tecnologia"
+    }
+  ],
+  "languages": [
+    { "language": "Português", "level": "Nativo" },
+    { "language": "Inglês", "level": "Proficiente (Certificação TOEFL)" }
+  ]
 }
