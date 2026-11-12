@@ -1,201 +1,404 @@
 {
-  "unificado": [
-    {
-      "group": "Gestão da Informação, Arquivologia & RDC-Arq",
-      "badge": "Arquivologia",
-      "items": [
-        "Gestão de Documentos Eletrônicos",
-        "Preservação Digital",
-        "Sistemas RDC-Arq",
-        "Classificação e Indexação Documental",
-        "Organização de Acervos",
-        "Plano de Classificação",
-        "Tabela de Temporalidade",
-        "Padrão de Metadados",
-        "Vocabulário Controlado",
-        "Quadro de Arranjo",
-        "LGPD (Lei Geral de Proteção de Dados)"
-      ]
-    },
-    {
-      "group": "Desenvolvimento Python, Web & Frameworks",
-      "badge": "Engenharia de Software",
-      "items": [
-        "Python",
-        "FastAPI",
-        "Flask",
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "HTML5 & CSS3",
-        "Tailwind CSS",
-        ".NET Framework",
-        "SQLAlchemy",
-        "Alembic",
-        "Pydantic",
-        "Jinja2",
-        "Tkinter"
-      ]
-    },
-    {
-      "group": "Inteligência Artificial & Automação Documental",
-      "badge": "IA & Automação",
-      "items": [
-        "LLMs (Large Language Models)",
-        "Google Gemini API (2.5 Flash Vision)",
-        "RAG (Retrieval-Augmented Generation)",
-        "Agentes Autônomos de IA (AI Agents)",
-        "MCP (Model Context Protocol)",
-        "Visão Computacional",
-        "Prompt Engineering",
-        "PyPDF2 & PyMuPDF",
-        "ReportLab",
-        "OCR (Tesseract)",
-        "Fuzzy Matching (FuzzyWuzzy)"
-      ]
-    },
-    {
-      "group": "Gestão de Processos, Dados & Infraestrutura",
-      "badge": "Processos & Dados",
-      "items": [
-        "Mapeamento de Processos (BPM / BizAgi)",
-        "Análise de Requisitos Funcionais",
-        "Gestão de Projetos e Mudanças",
-        "SQL (SQLite, MariaDB)",
-        "Supabase & Firebase Realtime DB",
-        "Microsoft Power BI",
-        "Pandas",
-        "Git, GitHub & GitLab",
-        "Uvicorn, Gunicorn & PythonAnywhere",
-        "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
-      ]
-    }
-  ],
-  "arquivista": [
-    {
-      "group": "Gestão da Informação e Arquivologia",
-      "badge": "Core Arquivístico",
-      "items": [
-        "Gestão de Documentos Eletrônicos",
-        "Preservação Digital",
-        "Sistemas RDC-Arq",
-        "Classificação e Indexação Documental",
-        "Organização de Acervos",
-        "Plano de Classificação",
-        "Tabela de Temporalidade",
-        "Padrão de Metadados",
-        "Vocabulário Controlado",
-        "Quadro de Arranjo",
-        "Gestão Documental Eletrônica"
-      ]
-    },
-    {
-      "group": "Gestão de Processos & Negócios",
-      "badge": "Processos",
-      "items": [
-        "Mapeamento de Processos de Negócio (BPM / BizAgi)",
-        "Análise de Requisitos",
-        "Gestão de Projetos",
-        "Gestão de Mudanças",
-        "Tramitação de Papéis e Processo Digital (SEI)",
-        "Pesquisa em Arquivos",
-        "Pensamento Crítico"
-      ]
-    },
-    {
-      "group": "DIFERENCIAL — Automação e Tecnologia Aplicada à Gestão Documental",
-      "badge": "Diferencial Competitivo",
-      "items": [
-        "Python",
-        "SQL",
-        "FastAPI & Flask",
-        "LLM (Large Language Models)",
-        "RAG (Retrieval-Augmented Generation)",
-        "Agentes Autônomos de IA",
-        "Visão Computacional",
-        "Automação Inteligente de Processos",
-        "LGPD (Lei Geral de Proteção de Dados)",
-        "SQLAlchemy",
-        "PyPDF2 & PyMuPDF",
-        "Fuzzy Matching & OCR"
-      ]
-    },
-    {
-      "group": "Análise de Dados, Ferramentas & Versionamento",
-      "badge": "Dados & Ferramentas",
-      "items": [
-        "Microsoft Power BI",
-        "Pandas",
-        "Pacote Office (Informática Avançada)",
-        "Git, GitHub & GitLab",
-        "Português (Nativo)",
-        "Inglês Proficiente (TOEFL)"
-      ]
-    }
-  ],
-  "dev": [
-    {
-      "group": "Linguagens, Frameworks & Bibliotecas",
-      "badge": "Stack Principal",
-      "items": [
-        "Python",
-        "SQL",
-        "JavaScript & TypeScript",
-        "HTML5 & CSS3",
-        "FastAPI",
-        "Flask",
-        "React",
-        ".NET Framework",
-        "SQLAlchemy & Alembic",
-        "Pydantic",
-        "Jinja2",
-        "ReportLab",
-        "PyPDF2 & PyMuPDF",
-        "Tkinter",
-        "FuzzyWuzzy"
-      ]
-    },
-    {
-      "group": "Inteligência Artificial & Engenharia de Agentes",
-      "badge": "IA Aplicada",
-      "items": [
-        "LLM (Large Language Models)",
-        "Google Gemini API",
-        "RAG (Retrieval-Augmented Generation)",
-        "Agentes Autônomos de IA (AI Agents)",
-        "MCP (Model Context Protocol)",
-        "Visão Computacional",
-        "Prompt Engineering",
-        "Automação Inteligente de Processos",
-        "Machine Learning"
-      ]
-    },
-    {
-      "group": "Banco de Dados, Dados & Infraestrutura",
-      "badge": "Dados & Cloud",
-      "items": [
-        "SQLite & MariaDB",
-        "Supabase",
-        "Firebase Realtime Database",
-        "Power BI & Pandas",
-        "Git, GitHub & GitLab",
-        "Uvicorn & Gunicorn",
-        "Deploy em Nuvem (PythonAnywhere)",
-        "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
-      ]
-    },
-    {
-      "group": "DIFERENCIAL — Domínio de Negócio em Gestão Documental",
-      "badge": "Diferencial GovTech / LegalTech",
-      "items": [
-        "Gestão de Documentos Eletrônicos",
-        "Preservação Digital & RDC-Arq",
-        "Classificação e Indexação Documental",
-        "Análise de Requisitos Funcionais",
-        "Mapeamento de Processos de Negócio (BPM / BizAgi)",
-        "LGPD (Lei Geral de Proteção de Dados)",
-        "Gestão de Projetos"
-      ]
-    }
-  ]
+  "pt": {
+    "unificado": [
+      {
+        "group": "Gestão da Informação, Arquivologia & RDC-Arq",
+        "badge": "Arquivologia",
+        "items": [
+          "Gestão de Documentos Eletrônicos",
+          "Preservação Digital",
+          "Sistemas RDC-Arq",
+          "Classificação e Indexação Documental",
+          "Organização de Acervos",
+          "Plano de Classificação",
+          "Tabela de Temporalidade",
+          "Padrão de Metadados",
+          "Vocabulário Controlado",
+          "Quadro de Arranjo",
+          "LGPD (Lei Geral de Proteção de Dados)"
+        ]
+      },
+      {
+        "group": "Desenvolvimento Python, Web & Frameworks",
+        "badge": "Engenharia de Software",
+        "items": [
+          "Python",
+          "FastAPI",
+          "Flask",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "HTML5 & CSS3",
+          "Tailwind CSS",
+          ".NET Framework",
+          "SQLAlchemy",
+          "Alembic",
+          "Pydantic",
+          "Jinja2",
+          "Tkinter"
+        ]
+      },
+      {
+        "group": "Inteligência Artificial & Automação Documental",
+        "badge": "IA & Automação",
+        "items": [
+          "LLMs (Large Language Models)",
+          "Google Gemini API (2.5 Flash Vision)",
+          "RAG (Retrieval-Augmented Generation)",
+          "Agentes Autônomos de IA (AI Agents)",
+          "MCP (Model Context Protocol)",
+          "Visão Computacional",
+          "Prompt Engineering",
+          "PyPDF2 & PyMuPDF",
+          "ReportLab",
+          "OCR (Tesseract)",
+          "Fuzzy Matching (FuzzyWuzzy)"
+        ]
+      },
+      {
+        "group": "Gestão de Processos, Dados & Infraestrutura",
+        "badge": "Processos & Dados",
+        "items": [
+          "Mapeamento de Processos (BPM / BizAgi)",
+          "Análise de Requisitos Funcionais",
+          "Gestão de Projetos e Mudanças",
+          "SQL (SQLite, MariaDB)",
+          "Supabase & Firebase Realtime DB",
+          "Microsoft Power BI",
+          "Pandas",
+          "Git, GitHub & GitLab",
+          "Uvicorn, Gunicorn & PythonAnywhere",
+          "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
+        ]
+      }
+    ],
+    "arquivista": [
+      {
+        "group": "Gestão da Informação e Arquivologia",
+        "badge": "Core Arquivístico",
+        "items": [
+          "Gestão de Documentos Eletrônicos",
+          "Preservação Digital",
+          "Sistemas RDC-Arq",
+          "Classificação e Indexação Documental",
+          "Organização de Acervos",
+          "Plano de Classificação",
+          "Tabela de Temporalidade",
+          "Padrão de Metadados",
+          "Vocabulário Controlado",
+          "Quadro de Arranjo",
+          "Gestão Documental Eletrônica"
+        ]
+      },
+      {
+        "group": "Gestão de Processos & Negócios",
+        "badge": "Processos",
+        "items": [
+          "Mapeamento de Processos de Negócio (BPM / BizAgi)",
+          "Análise de Requisitos",
+          "Gestão de Projetos",
+          "Gestão de Mudanças",
+          "Tramitação de Papéis e Processo Digital (SEI)",
+          "Pesquisa em Arquivos",
+          "Pensamento Crítico"
+        ]
+      },
+      {
+        "group": "DIFERENCIAL — Automação e Tecnologia Aplicada à Gestão Documental",
+        "badge": "Diferencial Competitivo",
+        "items": [
+          "Python",
+          "SQL",
+          "FastAPI & Flask",
+          "LLM (Large Language Models)",
+          "RAG (Retrieval-Augmented Generation)",
+          "Agentes Autônomos de IA",
+          "Visão Computacional",
+          "Automação Inteligente de Processos",
+          "LGPD (Lei Geral de Proteção de Dados)",
+          "SQLAlchemy",
+          "PyPDF2 & PyMuPDF",
+          "Fuzzy Matching & OCR"
+        ]
+      },
+      {
+        "group": "Análise de Dados, Ferramentas & Versionamento",
+        "badge": "Dados & Ferramentas",
+        "items": [
+          "Microsoft Power BI",
+          "Pandas",
+          "Pacote Office (Informática Avançada)",
+          "Git, GitHub & GitLab",
+          "Português (Nativo)",
+          "Inglês Proficiente (TOEFL)"
+        ]
+      }
+    ],
+    "dev": [
+      {
+        "group": "Linguagens, Frameworks & Bibliotecas",
+        "badge": "Stack Principal",
+        "items": [
+          "Python",
+          "SQL",
+          "JavaScript & TypeScript",
+          "HTML5 & CSS3",
+          "FastAPI",
+          "Flask",
+          "React",
+          ".NET Framework",
+          "SQLAlchemy & Alembic",
+          "Pydantic",
+          "Jinja2",
+          "ReportLab",
+          "PyPDF2 & PyMuPDF",
+          "Tkinter",
+          "FuzzyWuzzy"
+        ]
+      },
+      {
+        "group": "Inteligência Artificial & Engenharia de Agentes",
+        "badge": "IA Aplicada",
+        "items": [
+          "LLM (Large Language Models)",
+          "Google Gemini API",
+          "RAG (Retrieval-Augmented Generation)",
+          "Agentes Autônomos de IA (AI Agents)",
+          "MCP (Model Context Protocol)",
+          "Visão Computacional",
+          "Prompt Engineering",
+          "Automação Inteligente de Processos",
+          "Machine Learning"
+        ]
+      },
+      {
+        "group": "Banco de Dados, Dados & Infraestrutura",
+        "badge": "Dados & Cloud",
+        "items": [
+          "SQLite & MariaDB",
+          "Supabase",
+          "Firebase Realtime Database",
+          "Power BI & Pandas",
+          "Git, GitHub & GitLab",
+          "Uvicorn & Gunicorn",
+          "Deploy em Nuvem (PythonAnywhere)",
+          "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
+        ]
+      },
+      {
+        "group": "DIFERENCIAL — Domínio de Negócio em Gestão Documental",
+        "badge": "Diferencial GovTech / LegalTech",
+        "items": [
+          "Gestão de Documentos Eletrônicos",
+          "Preservação Digital & RDC-Arq",
+          "Classificação e Indexação Documental",
+          "Análise de Requisitos Funcionais",
+          "Mapeamento de Processos de Negócio (BPM / BizAgi)",
+          "LGPD (Lei Geral de Proteção de Dados)",
+          "Gestão de Projetos"
+        ]
+      }
+    ]
+  },
+  "en": {
+    "unificado": [
+      {
+        "group": "Information Management, Archival Science & Digital Repositories",
+        "badge": "Archival Science",
+        "items": [
+          "Electronic Records Management (ERMS)",
+          "Digital Preservation",
+          "Trusted Digital Repositories (RDC-Arq)",
+          "Document Classification & Indexing",
+          "Collection Arrangement & Description",
+          "Records Classification Scheme",
+          "Records Retention Schedule",
+          "Metadata Standards (Dublin Core / e-ARQ)",
+          "Controlled Vocabularies & Thesauri",
+          "Archival Arrangement Plan",
+          "LGPD & Data Privacy Compliance"
+        ]
+      },
+      {
+        "group": "Python Development, Web & Frameworks",
+        "badge": "Software Engineering",
+        "items": [
+          "Python",
+          "FastAPI",
+          "Flask",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "HTML5 & CSS3",
+          "Tailwind CSS",
+          ".NET Framework",
+          "SQLAlchemy",
+          "Alembic",
+          "Pydantic",
+          "Jinja2",
+          "Tkinter"
+        ]
+      },
+      {
+        "group": "Artificial Intelligence & Document Automation",
+        "badge": "AI & Automation",
+        "items": [
+          "LLMs (Large Language Models)",
+          "Google Gemini API (2.5 Flash Vision)",
+          "RAG (Retrieval-Augmented Generation)",
+          "Autonomous AI Agents",
+          "MCP (Model Context Protocol)",
+          "Computer Vision",
+          "Prompt Engineering",
+          "PyPDF2 & PyMuPDF",
+          "ReportLab",
+          "OCR (Tesseract)",
+          "Fuzzy Matching (FuzzyWuzzy)"
+        ]
+      },
+      {
+        "group": "Business Process Management, Data & Cloud",
+        "badge": "Processes & Data",
+        "items": [
+          "Business Process Modeling (BPM / BizAgi)",
+          "Functional Requirements Engineering",
+          "Project & Change Management",
+          "SQL (SQLite, MariaDB)",
+          "Supabase & Firebase Realtime DB",
+          "Microsoft Power BI",
+          "Pandas",
+          "Git, GitHub & GitLab",
+          "Uvicorn, Gunicorn & PythonAnywhere",
+          "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
+        ]
+      }
+    ],
+    "arquivista": [
+      {
+        "group": "Information Management & Archival Science",
+        "badge": "Core Archival Domain",
+        "items": [
+          "Electronic Records Management (ERMS)",
+          "Digital Preservation",
+          "Trusted Digital Repositories (RDC-Arq)",
+          "Document Classification & Indexing",
+          "Collection Arrangement & Description",
+          "Records Classification Scheme",
+          "Records Retention Schedule",
+          "Metadata Standards (e-ARQ / Dublin Core)",
+          "Controlled Vocabulary",
+          "Arrangement Plan",
+          "Electronic Document Flow Management"
+        ]
+      },
+      {
+        "group": "Process & Business Management",
+        "badge": "Processes",
+        "items": [
+          "Business Process Modeling (BPM / BizAgi)",
+          "Requirements Analysis",
+          "Project Management",
+          "Change Management",
+          "Workflow Governance & Electronic Document Flow (SEI)",
+          "Archival Research",
+          "Critical Thinking"
+        ]
+      },
+      {
+        "group": "DIFFERENTIATOR — Automation & Applied Technology in Document Management",
+        "badge": "Competitive Advantage",
+        "items": [
+          "Python",
+          "SQL",
+          "FastAPI & Flask",
+          "LLM (Large Language Models)",
+          "RAG (Retrieval-Augmented Generation)",
+          "Autonomous AI Agents",
+          "Computer Vision",
+          "Intelligent Process Automation (IPA)",
+          "LGPD (Data Protection Regulation)",
+          "SQLAlchemy",
+          "PyPDF2 & PyMuPDF",
+          "Fuzzy Matching & OCR"
+        ]
+      },
+      {
+        "group": "Data Analytics, Tooling & Version Control",
+        "badge": "Analytics & Tools",
+        "items": [
+          "Microsoft Power BI",
+          "Pandas",
+          "Microsoft Office Suite (Advanced)",
+          "Git, GitHub & GitLab",
+          "Portuguese (Native)",
+          "English (Proficient - TOEFL)"
+        ]
+      }
+    ],
+    "dev": [
+      {
+        "group": "Languages, Frameworks & Libraries",
+        "badge": "Core Tech Stack",
+        "items": [
+          "Python",
+          "SQL",
+          "JavaScript & TypeScript",
+          "HTML5 & CSS3",
+          "FastAPI",
+          "Flask",
+          "React",
+          ".NET Framework",
+          "SQLAlchemy & Alembic",
+          "Pydantic",
+          "Jinja2",
+          "ReportLab",
+          "PyPDF2 & PyMuPDF",
+          "Tkinter",
+          "FuzzyWuzzy"
+        ]
+      },
+      {
+        "group": "Artificial Intelligence & Agent Engineering",
+        "badge": "Applied AI",
+        "items": [
+          "LLM (Large Language Models)",
+          "Google Gemini API",
+          "RAG (Retrieval-Augmented Generation)",
+          "Autonomous AI Agents",
+          "MCP (Model Context Protocol)",
+          "Computer Vision",
+          "Prompt Engineering",
+          "Intelligent Process Automation",
+          "Machine Learning"
+        ]
+      },
+      {
+        "group": "Databases, Data Analytics & Infrastructure",
+        "badge": "Data & Cloud",
+        "items": [
+          "SQLite & MariaDB",
+          "Supabase",
+          "Firebase Realtime Database",
+          "Power BI & Pandas",
+          "Git, GitHub & GitLab",
+          "Uvicorn & Gunicorn",
+          "Cloud Deployment (PythonAnywhere)",
+          "Linux (Ubuntu, Mint, Fedora), Windows & macOS"
+        ]
+      },
+      {
+        "group": "DIFFERENTIATOR — Business Domain Mastery in Records & Information Management",
+        "badge": "GovTech / LegalTech Differentiator",
+        "items": [
+          "Electronic Records Management",
+          "Digital Preservation & RDC-Arq",
+          "Document Classification & Indexing",
+          "Functional Requirements Analysis",
+          "Business Process Modeling (BPM / BizAgi)",
+          "LGPD (Data Protection Law)",
+          "Project Management"
+        ]
+      }
+    ]
+  }
 }

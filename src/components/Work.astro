@@ -1,5 +1,6 @@
 ---
 import work from "../../data/work.json";
+import i18n from "../../data/i18n.json";
 
 const profileIds = ["unificado", "arquivista", "dev"] as const;
 ---
@@ -8,52 +9,97 @@ const profileIds = ["unificado", "arquivista", "dev"] as const;
   {
     profileIds.map((pid) => (
       <div class="profile-block" data-for-profile={pid}>
-        <dl class="stats">
-          {work.stats[pid].map((stat) => (
-            <div>
-              <dt>{stat.value}</dt>
-              <dd>{stat.label}</dd>
-            </div>
-          ))}
-        </dl>
-        <h2>{work.sectionTitle[pid]}</h2>
+        <div data-for-lang="pt">
+          <dl class="stats">
+            {work.pt.stats[pid].map((stat) => (
+              <div>
+                <dt>{stat.value}</dt>
+                <dd>{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
+          <h2>{work.pt.sectionTitle[pid]}</h2>
+        </div>
+
+        <div data-for-lang="en">
+          <dl class="stats">
+            {work.en.stats[pid].map((stat) => (
+              <div>
+                <dt>{stat.value}</dt>
+                <dd>{stat.label}</dd>
+              </div>
+            ))}
+          </dl>
+          <h2>{work.en.sectionTitle[pid]}</h2>
+        </div>
       </div>
     ))
   }
 
   <div class="case-list">
     {
-      work.caseStudies.map((study) => (
-        <article
-          class="case"
-          data-case-profiles={study.profiles.join(" ")}
-          style={`--order-unificado: ${study.order.unificado}; --order-arquivista: ${study.order.arquivista}; --order-dev: ${study.order.dev};`}
-        >
-          <p class="case-meta">
-            {study.company} · {study.year}
-          </p>
-          <h3>{study.title}</h3>
-          <div class="case-grid">
-            <div>
-              <h4>Desafio</h4>
-              <p>{study.problem}</p>
+      work.pt.caseStudies.map((study, idx) => {
+        const studyEn = work.en.caseStudies[idx];
+        return (
+          <article
+            class="case"
+            data-case-profiles={study.profiles.join(" ")}
+            style={`--order-unificado: ${study.order.unificado}; --order-arquivista: ${study.order.arquivista}; --order-dev: ${study.order.dev};`}
+          >
+            <div data-for-lang="pt">
+              <p class="case-meta">
+                {study.company} · {study.year}
+              </p>
+              <h3>{study.title}</h3>
+              <div class="case-grid">
+                <div>
+                  <h4>{i18n.pt.challengeLabel}</h4>
+                  <p>{study.problem}</p>
+                </div>
+                <div>
+                  <h4>{i18n.pt.approachLabel}</h4>
+                  <p>{study.approach}</p>
+                </div>
+                <div>
+                  <h4>{i18n.pt.resultLabel}</h4>
+                  <p>{study.result}</p>
+                </div>
+              </div>
+              <ul class="tags">
+                {study.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <h4>Abordagem</h4>
-              <p>{study.approach}</p>
+
+            <div data-for-lang="en">
+              <p class="case-meta">
+                {studyEn.company} · {studyEn.year}
+              </p>
+              <h3>{studyEn.title}</h3>
+              <div class="case-grid">
+                <div>
+                  <h4>{i18n.en.challengeLabel}</h4>
+                  <p>{studyEn.problem}</p>
+                </div>
+                <div>
+                  <h4>{i18n.en.approachLabel}</h4>
+                  <p>{studyEn.approach}</p>
+                </div>
+                <div>
+                  <h4>{i18n.en.resultLabel}</h4>
+                  <p>{studyEn.result}</p>
+                </div>
+              </div>
+              <ul class="tags">
+                {studyEn.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <h4>Resultado</h4>
-              <p>{study.result}</p>
-            </div>
-          </div>
-          <ul class="tags">
-            {study.tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul>
-        </article>
-      ))
+          </article>
+        );
+      })
     }
   </div>
 </section>

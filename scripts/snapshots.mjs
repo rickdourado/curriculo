@@ -1,8 +1,11 @@
-// Renderiza os arquivos de currículo em PDF (para cada perfil) e a imagem de preview (og.jpg) em dist/:
-//   cv.pdf             - versão Unificada (Híbrida)
-//   cv-arquivista.pdf  - versão com foco em Arquivista Sênior
-//   cv-dev-python.pdf  - versão com foco em Desenvolvedor Python & IA
-//   og.jpg             - hero em 1200×630 para preview de links
+// Renderiza os arquivos de currículo em PDF (para cada perfil em PT e EN) e a imagem de preview (og.jpg) em dist/:
+//   cv.pdf                - versão Unificada (PT)
+//   cv-arquivista.pdf     - versão Arquivista Sênior (PT)
+//   cv-dev-python.pdf     - versão Dev Python & IA (PT)
+//   cv-en.pdf             - versão Unificada (EN)
+//   cv-arquivista-en.pdf  - versão Senior Archivist (EN)
+//   cv-dev-python-en.pdf  - versão Python & AI Dev (EN)
+//   og.jpg                - hero em 1200×630 para preview de links
 import { readFile, stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import { extname, join, normalize } from "node:path";
@@ -56,9 +59,12 @@ const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PAT
 
 try {
   const pdfVariants = [
-    { query: "?perfil=unificado", file: "cv.pdf" },
-    { query: "?perfil=arquivista", file: "cv-arquivista.pdf" },
-    { query: "?perfil=dev", file: "cv-dev-python.pdf" },
+    { query: "?lang=pt&perfil=unificado", file: "cv.pdf" },
+    { query: "?lang=pt&perfil=arquivista", file: "cv-arquivista.pdf" },
+    { query: "?lang=pt&perfil=dev", file: "cv-dev-python.pdf" },
+    { query: "?lang=en&perfil=unificado", file: "cv-en.pdf" },
+    { query: "?lang=en&perfil=arquivista", file: "cv-arquivista-en.pdf" },
+    { query: "?lang=en&perfil=dev", file: "cv-dev-python-en.pdf" },
   ];
 
   for (const variant of pdfVariants) {

@@ -1,22 +1,40 @@
-# Patrick Dourado Ribeiro — Currículo Interativo
+# Patrick Dourado Ribeiro — Currículo Interativo & Landing Page Bilíngue
 
 [![Website](https://img.shields.io/badge/GitHub%20Pages-rickdourado.github.io%2Fcurriculo-1f305e)](https://rickdourado.github.io/curriculo/)
 
-Landing page interativa e currículo de **Patrick Dourado Ribeiro** — **Doutor em Ciência da Informação (IBICT/UFRJ)**, **Arquivista Sênior (17 anos de experiência)** e **Desenvolvedor Python & Especialista em IA (6 anos de experiência)**.
+Landing page interativa e currículo profissional bilíngue (**Português / Inglês**) de **Patrick Dourado Ribeiro** — **Doutor em Ciência da Informação (IBICT/UFRJ)**, **Arquivista Sênior (17 anos de experiência)** e **Desenvolvedor Python & Especialista em IA (6 anos de experiência)**.
 
-## Lentes de Perfil Interativas
+## Lentes de Perfil Interativas & Suporte a Idiomas (PT / EN)
 
-A página permite alternar de forma fluida entre três visões complementares (inclusive por parâmetros de URL para envio direto a recrutadores):
+A interface conta com um seletor de idioma na TopBar (`PT` / `EN`) que altera dinamicamente todo o conteúdo (textos, títulos, estudos de caso, competências, histórico profissional e downloads de PDF) de forma instantânea e fluida, sem recarregar a página e preservando a animação da pintura *Starry Night*.
 
-- **Visão Unificada (Padrão)**: `https://rickdourado.github.io/curriculo/` — Integra a trajetória completa em Ciência da Informação, Arquivologia e Engenharia de Software/IA.
-- **Arquivista Sênior**: `https://rickdourado.github.io/curriculo/?perfil=arquivista` — Ênfase em Gestão Documental, Preservação Digital, RDC-Arq e grandes acervos (Petrobras, FIOCRUZ, IPHAN, UNESCO, Casa Civil-RJ, ANATEL, ECAD), apresentando Python e IA como diferencial competitivo.
-- **Dev Python & IA**: `https://rickdourado.github.io/curriculo/?perfil=dev` — Ênfase em Desenvolvimento Python, FastAPI, Flask, LLMs, RAG, Agentes Autônomos e Visão Computacional, apresentando os 17 anos em Gestão Documental e Doutorado como diferencial de domínio de negócio (GovTech/LegalTech).
+Além disso, a página suporta links diretos via parâmetros de URL, ideais para envio direcionado a recrutadores e avaliadores:
 
-Cada perfil também conta com sua versão dedicada em PDF gerada automaticamente no build (`cv.pdf`, `cv-arquivista.pdf` e `cv-dev-python.pdf`).
+### Links Diretos por Idioma e Perfil:
+
+- **Visão Unificada (Padrão):**
+  - Português: [`https://rickdourado.github.io/curriculo/`](https://rickdourado.github.io/curriculo/)
+  - English: [`https://rickdourado.github.io/curriculo/?lang=en`](https://rickdourado.github.io/curriculo/?lang=en)
+- **Arquivista Sênior / Senior Archivist:**
+  - Português: [`https://rickdourado.github.io/curriculo/?perfil=arquivista`](https://rickdourado.github.io/curriculo/?perfil=arquivista)
+  - English: [`https://rickdourado.github.io/curriculo/?lang=en&perfil=arquivista`](https://rickdourado.github.io/curriculo/?lang=en&perfil=arquivista)
+- **Desenvolvedor Python & IA / Python & AI Dev:**
+  - Português: [`https://rickdourado.github.io/curriculo/?perfil=dev`](https://rickdourado.github.io/curriculo/?perfil=dev)
+  - English: [`https://rickdourado.github.io/curriculo/?lang=en&perfil=dev`](https://rickdourado.github.io/curriculo/?lang=en&perfil=dev)
+
+### Versões em PDF Geradas no Build:
+- **Português:**
+  - [`cv.pdf`](https://rickdourado.github.io/curriculo/cv.pdf) — Currículo Completo Unificado
+  - [`cv-arquivista.pdf`](https://rickdourado.github.io/curriculo/cv-arquivista.pdf) — Foco Arquivista Sênior
+  - [`cv-dev-python.pdf`](https://rickdourado.github.io/curriculo/cv-dev-python.pdf) — Foco Dev Python & IA
+- **English:**
+  - [`cv-en.pdf`](https://rickdourado.github.io/curriculo/cv-en.pdf) — Full Unified Resume
+  - [`cv-arquivista-en.pdf`](https://rickdourado.github.io/curriculo/cv-arquivista-en.pdf) — Senior Archivist Resume
+  - [`cv-dev-python-en.pdf`](https://rickdourado.github.io/curriculo/cv-dev-python-en.pdf) — Python & AI Dev Resume
 
 ## Stack
 
-- **[Astro](https://astro.build)**: geração estática de alta performance.
-- **Canvas 2D (`src/scripts/starry-night.js`)**: pintura animada *Starry Night* em JavaScript puro, com transições sutis de paleta conforme o perfil selecionado.
-- **Playwright (`scripts/snapshots.mjs`)**: gera automaticamente os PDFs de cada perfil (`cv.pdf`, `cv-arquivista.pdf`, `cv-dev-python.pdf`) e a imagem OpenGraph (`og.jpg`).
-- **GitHub Actions + GitHub Pages**: deploy automatizado a cada push na branch `master`/`main`.
+- **[Astro](https://astro.build)**: geração de HTML estático ultra-rápido com SEO otimizado.
+- **Canvas 2D (`src/scripts/starry-night.js`)**: pintura viva *Starry Night* em JavaScript nativo com adaptação sutil de paleta por perfil.
+- **Playwright (`scripts/snapshots.mjs`)**: renderiza automaticamente todos os 6 PDFs (PT e EN) e a imagem OpenGraph (`og.jpg`).
+- **GitHub Actions + GitHub Pages**: deploy contínuo em cada push na branch `master`.

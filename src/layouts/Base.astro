@@ -4,23 +4,29 @@ import profile from "../../data/profile.json";
 import { THEMES } from "../themes";
 
 interface Props {
-  title: string;
-  description: string;
+  titlePt: string;
+  titleEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
 }
 
-const { title, description } = Astro.props;
+const { titlePt, titleEn, descriptionPt, descriptionEn } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(`${baseUrl}/og.jpg`, Astro.site);
 const themeIds = THEMES.map((theme) => theme.id);
+
 const person = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
   jobTitle: [
     "Arquivista Sênior",
+    "Senior Archivist",
     "Desenvolvedor Python & Especialista em Inteligência Artificial",
+    "Python Developer & AI Specialist",
     "Doutor em Ciência da Informação",
+    "Ph.D. in Information Science",
   ],
   email: `mailto:${profile.email}`,
   telephone: profile.phone,
@@ -36,19 +42,27 @@ const person = {
 ---
 
 <!doctype html>
-<html lang="pt-BR" data-profile="unificado">
+<html
+  lang="pt-BR"
+  data-lang="pt"
+  data-profile="unificado"
+  data-title-pt={titlePt}
+  data-title-en={titleEn}
+  data-desc-pt={descriptionPt}
+  data-desc-en={descriptionEn}
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title id="page-title">{titlePt}</title>
+    <meta name="description" id="page-desc" content={descriptionPt} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={`${baseUrl}/favicon.svg`} type="image/svg+xml" />
     <link rel="icon" href={`${baseUrl}/favicon.ico`} sizes="any" />
     <meta name="theme-color" content="#0a1640" />
     <meta property="og:type" content="profile" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" id="og-title" content={titlePt} />
+    <meta property="og:description" id="og-desc" content={descriptionPt} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -60,7 +74,7 @@ const person = {
     />
     <script type="application/ld+json" set:html={JSON.stringify(person)} />
     <script is:inline define:vars={{ themeIds }}>
-      // Define o tema e o perfil antes do primeiro paint para evitar flash visual
+      // 1. Tema antes do primeiro paint
       let theme = themeIds[0];
       try {
         const saved = localStorage.getItem("theme");
@@ -68,12 +82,37 @@ const person = {
       } catch {}
       document.documentElement.dataset.theme = theme;
 
-      const validProfiles = ["unificado", "arquivista", "dev"];
+      // 2. Idioma antes do primeiro paint
+      let lang = "pt";
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get("lang") || params.get("idioma");
+        if (urlLang && ["pt", "en"].includes(urlLang)) {
+          lang = urlLang;
+        } else {
+          const savedLang = localStorage.getItem("lang");
+          if (savedLang && ["pt", "en"].includes(savedLang)) {
+            lang = savedLang;
+          }
+        }
+      } catch {}
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+      if (lang === "en") {
+        const tEn = document.documentElement.dataset.titleEn;
+        const dEn = document.documentElement.dataset.descEn;
+        if (tEn) document.title = tEn;
+        const descEl = document.getElementById("page-desc");
+        if (descEl && dEn) descEl.setAttribute("content", dEn);
+      }
+
+      // 3. Perfil profissional antes do primeiro paint
+      const allowedProfiles = ["unificado", "arquivista", "dev"];
       let activeProfile = "unificado";
       try {
         const params = new URLSearchParams(window.location.search);
         const urlProfile = params.get("perfil") || params.get("profile");
-        if (urlProfile && validProfiles.includes(urlProfile)) {
+        if (urlProfile && allowedProfiles.includes(urlProfile)) {
           activeProfile = urlProfile;
         }
       } catch {}
@@ -82,59 +121,114 @@ const person = {
   </head>
   <body>
     <slot />
-    <script>
-      const validProfiles = ["unificado", "arquivista", "dev"] as const;
-      type ProfileId = (typeof validProfiles)[number];
+    <script is:inline>
+      (function () {
+        const profileChoices = ["unificado", "arquivista", "dev"];
 
-      function setProfile(profileId: ProfileId, updateUrl = true) {
-        if (!validProfiles.includes(profileId)) return;
-        const root = document.documentElement;
-        if (root.dataset.profile !== profileId) {
-          root.classList.add("profile-switching");
-          window.setTimeout(
-            () => root.classList.remove("profile-switching"),
-            380,
-          );
+        function setProfile(profileId, updateUrl = true) {
+          if (!profileChoices.includes(profileId)) return;
+          const root = document.documentElement;
+          if (root.dataset.profile !== profileId) {
+            root.classList.add("profile-switching");
+            window.setTimeout(
+              () => root.classList.remove("profile-switching"),
+              380,
+            );
+          }
+          root.dataset.profile = profileId;
+
+          // Atualiza estado aria-pressed de todos os botões seletores de perfil
+          document
+            .querySelectorAll("[data-set-profile]")
+            .forEach((btn) => {
+              const isCurrent = btn.dataset.setProfile === profileId;
+              btn.setAttribute("aria-pressed", String(isCurrent));
+              btn.classList.toggle("active", isCurrent);
+            });
+
+          if (updateUrl) {
+            try {
+              const url = new URL(window.location.href);
+              if (profileId === "unificado") {
+                url.searchParams.delete("perfil");
+                url.searchParams.delete("profile");
+              } else {
+                url.searchParams.set("perfil", profileId);
+              }
+              window.history.replaceState({}, "", url.toString());
+            } catch {}
+          }
         }
-        root.dataset.profile = profileId;
 
-        // Atualiza estado aria-pressed de todos os botões seletores
-        document
-          .querySelectorAll<HTMLButtonElement>("[data-set-profile]")
-          .forEach((btn) => {
-            const isCurrent = btn.dataset.setProfile === profileId;
+        function setLang(langId, updateUrl = true) {
+          if (!["pt", "en"].includes(langId)) return;
+          const root = document.documentElement;
+          if (root.dataset.lang !== langId) {
+            root.classList.add("lang-switching");
+            window.setTimeout(() => root.classList.remove("lang-switching"), 340);
+          }
+          root.dataset.lang = langId;
+          root.lang = langId === "en" ? "en" : "pt-BR";
+          try {
+            localStorage.setItem("lang", langId);
+          } catch {}
+
+          // Atualiza botões do switcher de idioma
+          document.querySelectorAll("[data-set-lang]").forEach((btn) => {
+            const isCurrent = btn.dataset.setLang === langId;
             btn.setAttribute("aria-pressed", String(isCurrent));
             btn.classList.toggle("active", isCurrent);
           });
 
-        if (updateUrl) {
-          try {
-            const url = new URL(window.location.href);
-            if (profileId === "unificado") {
-              url.searchParams.delete("perfil");
-              url.searchParams.delete("profile");
-            } else {
-              url.searchParams.set("perfil", profileId);
-            }
-            window.history.replaceState({}, "", url.toString());
-          } catch {}
+          // Atualiza título e metadados
+          const title = langId === "en" ? root.dataset.titleEn : root.dataset.titlePt;
+          const desc = langId === "en" ? root.dataset.descEn : root.dataset.descPt;
+          if (title) document.title = title;
+          const descEl = document.getElementById("page-desc");
+          if (descEl && desc) descEl.setAttribute("content", desc);
+          const ogTitleEl = document.getElementById("og-title");
+          if (ogTitleEl && title) ogTitleEl.setAttribute("content", title);
+          const ogDescEl = document.getElementById("og-desc");
+          if (ogDescEl && desc) ogDescEl.setAttribute("content", desc);
+
+          if (updateUrl) {
+            try {
+              const url = new URL(window.location.href);
+              if (langId === "pt") {
+                url.searchParams.delete("lang");
+                url.searchParams.delete("idioma");
+              } else {
+                url.searchParams.set("lang", langId);
+              }
+              window.history.replaceState({}, "", url.toString());
+            } catch {}
+          }
         }
-      }
 
-      // Sincroniza estado inicial dos botões
-      const current =
-        (document.documentElement.dataset.profile as ProfileId) || "unificado";
-      setProfile(current, false);
+        // Sincroniza estado inicial dos botões
+        const initialProfile = document.documentElement.dataset.profile || "unificado";
+        setProfile(initialProfile, false);
 
-      // Escuta cliques nos botões de troca de perfil
-      document.addEventListener("click", (e) => {
-        const target = (
-          e.target as HTMLElement | null
-        )?.closest<HTMLButtonElement>("[data-set-profile]");
-        if (!target) return;
-        const nextProfile = target.dataset.setProfile as ProfileId;
-        setProfile(nextProfile, true);
-      });
+        const initialLang = document.documentElement.dataset.lang || "pt";
+        setLang(initialLang, false);
+
+        // Event delegation para troca de perfil e idioma
+        document.addEventListener("click", (e) => {
+          const profileTarget = e.target?.closest?.("[data-set-profile]");
+          if (profileTarget) {
+            const nextProfile = profileTarget.dataset.setProfile;
+            setProfile(nextProfile, true);
+            return;
+          }
+
+          const langTarget = e.target?.closest?.("[data-set-lang]");
+          if (langTarget) {
+            const nextLang = langTarget.dataset.setLang;
+            setLang(nextLang, true);
+            return;
+          }
+        });
+      })();
     </script>
   </body>
 </html>

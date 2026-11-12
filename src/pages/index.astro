@@ -9,11 +9,20 @@ import TopBar from "../components/TopBar.astro";
 import Work from "../components/Work.astro";
 import Base from "../layouts/Base.astro";
 
-const defaultProfile = profile.profiles.unificado;
+const defaultProfilePt = profile.pt.profiles.unificado;
+const defaultProfileEn = profile.en.profiles.unificado;
 ---
 
-<Base title={`${profile.name} · ${defaultProfile.roleTitle}`} description={defaultProfile.description}>
-  <a class="skip" href="#main">Pular para o conteúdo</a>
+<Base
+  titlePt={`${profile.name} · ${defaultProfilePt.roleTitle}`}
+  titleEn={`${profile.name} · ${defaultProfileEn.roleTitle}`}
+  descriptionPt={defaultProfilePt.description}
+  descriptionEn={defaultProfileEn.description}
+>
+  <a class="skip" href="#main">
+    <span data-for-lang="pt">Pular para o conteúdo</span>
+    <span data-for-lang="en">Skip to content</span>
+  </a>
   <StarryNight />
   <TopBar />
   <main id="main">

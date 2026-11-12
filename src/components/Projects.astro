@@ -8,14 +8,32 @@ const profileIds = ["unificado", "arquivista", "dev"] as const;
   {
     profileIds.map((pid) => (
       <div class="profile-block" data-for-profile={pid}>
-        <h2>{projects.sectionTitle[pid]}</h2>
+        <h2 data-for-lang="pt">{projects.pt.sectionTitle[pid]}</h2>
+        <h2 data-for-lang="en">{projects.en.sectionTitle[pid]}</h2>
       </div>
     ))
   }
 
-  <div class="projects">
+  <div class="projects" data-for-lang="pt">
     {
-      projects.items.map((project) => (
+      projects.pt.items.map((project) => (
+        <a class="project" href={project.url} target="_blank" rel="noopener noreferrer">
+          <p class="project-category">{project.category}</p>
+          <h3>{project.name}</h3>
+          <p>{project.description}</p>
+          <ul class="tags project-tags">
+            {project.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="projects" data-for-lang="en">
+    {
+      projects.en.items.map((project) => (
         <a class="project" href={project.url} target="_blank" rel="noopener noreferrer">
           <p class="project-category">{project.category}</p>
           <h3>{project.name}</h3>

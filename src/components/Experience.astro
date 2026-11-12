@@ -2,28 +2,48 @@
 import employment from "../../data/employment.json";
 import profile from "../../data/profile.json";
 import skills from "../../data/skills.json";
+import i18n from "../../data/i18n.json";
 
 const profileIds = ["unificado", "arquivista", "dev"] as const;
-const arqEdu = profile.education.filter((e) => e.category === "arquivologia");
-const techEdu = profile.education.filter((e) => e.category === "tecnologia");
+
+const arqEduPt = profile.pt.education.filter((e) => e.category === "arquivologia");
+const techEduPt = profile.pt.education.filter((e) => e.category === "tecnologia");
+
+const arqEduEn = profile.en.education.filter((e) => e.category === "arquivologia");
+const techEduEn = profile.en.education.filter((e) => e.category === "tecnologia");
 ---
 
 <section class="section" id="experience">
   <div class="section-header-row">
-    <h2>Experiência Profissional</h2>
+    <h2>
+      <span data-for-lang="pt">{i18n.pt.experienceTitle}</span>
+      <span data-for-lang="en">{i18n.en.experienceTitle}</span>
+    </h2>
+
     <div class="profile-block" data-for-profile="unificado">
-      <p class="section-subtitle">
+      <p class="section-subtitle" data-for-lang="pt">
         Trajetória completa (2008 – 2026) integrando Gestão Documental, Ciência da Informação e Desenvolvimento de Software.
       </p>
-    </div>
-    <div class="profile-block" data-for-profile="arquivista">
-      <p class="section-subtitle">
-        Todas as experiências exibidas com ênfase em Gestão Documental, Preservação Digital, RDC-Arq e Instrumentos Arquivísticos.
+      <p class="section-subtitle" data-for-lang="en">
+        Comprehensive career journey (2008 – 2026) bridging Records Management, Information Science, and Software Engineering.
       </p>
     </div>
+
+    <div class="profile-block" data-for-profile="arquivista">
+      <p class="section-subtitle" data-for-lang="pt">
+        Todas as experiências exibidas com ênfase em Gestão Documental, Preservação Digital, RDC-Arq e Instrumentos Arquivísticos.
+      </p>
+      <p class="section-subtitle" data-for-lang="en">
+        Full trajectory detailed with core emphasis on Records Management, Digital Preservation, and Archival Governance.
+      </p>
+    </div>
+
     <div class="profile-block" data-for-profile="dev">
-      <p class="section-subtitle">
+      <p class="section-subtitle" data-for-lang="pt">
         Todas as experiências exibidas com ênfase em Engenharia de Software, Python, FastAPI, IA Aplicada e Domínio de Negócio.
+      </p>
+      <p class="section-subtitle" data-for-lang="en">
+        Full career history presented with primary focus on Software Engineering, Python, FastAPI, Applied AI, and Domain Mastery.
       </p>
     </div>
   </div>
@@ -37,10 +57,13 @@ const techEdu = profile.education.filter((e) => e.category === "tecnologia");
           data-focus-dev={job.focus.includes("dev") ? "true" : "false"}
         >
           <div class="when-col">
-            <p class="when">{job.dates}</p>
+            <p class="when" data-for-lang="pt">{job.pt.dates}</p>
+            <p class="when" data-for-lang="en">{job.en.dates}</p>
+
             {profileIds.map((pid) => (
               <span class="profile-block domain-badge" data-for-profile={pid}>
-                {job.domainBadge[pid]}
+                <span data-for-lang="pt">{job.pt.domainBadge[pid]}</span>
+                <span data-for-lang="en">{job.en.domainBadge[pid]}</span>
               </span>
             ))}
           </div>
@@ -48,54 +71,80 @@ const techEdu = profile.education.filter((e) => e.category === "tecnologia");
           <div class="role-col">
             {profileIds.map((pid) => (
               <div class="profile-block" data-for-profile={pid}>
-                <h3 class="role">
-                  {job.role[pid]} <span class="at">· {job.company}</span>
-                </h3>
-                <p class="where">{job.where}</p>
-                <ul class="what-list">
-                  {job.bullets[pid].map((bullet) => (
-                    <li>{bullet}</li>
-                  ))}
-                </ul>
+                <div data-for-lang="pt">
+                  <h3 class="role">
+                    {job.pt.role[pid]} <span class="at">· {job.pt.company}</span>
+                  </h3>
+                  <p class="where">{job.pt.where}</p>
+                  <ul class="what-list">
+                    {job.pt.bullets[pid].map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
+                  {job.pt.note && <p class="job-note">{job.pt.note}</p>}
+                </div>
+
+                <div data-for-lang="en">
+                  <h3 class="role">
+                    {job.en.role[pid]} <span class="at">· {job.en.company}</span>
+                  </h3>
+                  <p class="where">{job.en.where}</p>
+                  <ul class="what-list">
+                    {job.en.bullets[pid].map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
+                  {job.en.note && <p class="job-note">{job.en.note}</p>}
+                </div>
               </div>
             ))}
 
-            {job.note && <p class="job-note">{job.note}</p>}
-
-            <ul class="tags compact-tags">
-              {job.tags.map((tag) => (
-                <li>{tag}</li>
-              ))}
-            </ul>
+            <div data-for-lang="pt">
+              <ul class="tags compact-tags">
+                {job.pt.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            </div>
+            <div data-for-lang="en">
+              <ul class="tags compact-tags">
+                {job.en.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </li>
       ))
     }
   </ol>
 
-  <h2 class="sub" id="education">Formação Acadêmica & Idiomas</h2>
+  <h2 class="sub" id="education">
+    <span data-for-lang="pt">{i18n.pt.educationTitle}</span>
+    <span data-for-lang="en">{i18n.en.educationTitle}</span>
+  </h2>
 
   {
     profileIds.map((pid) => {
-      const groups =
+      const groupsPt =
         pid === "dev"
           ? [
               {
                 title: "Formação em Tecnologia",
                 badge: "Graduação Principal Tech",
-                items: techEdu,
+                items: techEduPt,
               },
               {
                 title: "Formação Complementar em Ciência da Informação e Arquivologia (Diferencial de Domínio)",
                 badge: "Doutorado & Mestrado IBICT/UFRJ",
-                items: arqEdu,
+                items: arqEduPt,
               },
             ]
           : [
               {
                 title: "Formação em Ciência da Informação e Arquivologia",
                 badge: "Doutorado, Mestrado, Especialização & Graduação",
-                items: arqEdu,
+                items: arqEduPt,
               },
               {
                 title:
@@ -103,69 +152,159 @@ const techEdu = profile.education.filter((e) => e.category === "tecnologia");
                     ? "Formação Complementar em Tecnologia (Diferencial Competitivo)"
                     : "Formação em Tecnologia & Desenvolvimento de Sistemas",
                 badge: "Engenharia de Software & IA",
-                items: techEdu,
+                items: techEduPt,
+              },
+            ];
+
+      const groupsEn =
+        pid === "dev"
+          ? [
+              {
+                title: "Technology & Software Engineering Degree",
+                badge: "Primary Tech Degree",
+                items: techEduEn,
+              },
+              {
+                title: "Complementary Background in Information & Archival Science (Domain Differentiator)",
+                badge: "Ph.D. & M.Sc. IBICT/UFRJ",
+                items: arqEduEn,
+              },
+            ]
+          : [
+              {
+                title: "Information Science & Archival Background",
+                badge: "Ph.D., M.Sc., Postgrad & B.A.",
+                items: arqEduEn,
+              },
+              {
+                title:
+                  pid === "arquivista"
+                    ? "Complementary Background in Technology (Competitive Advantage)"
+                    : "Software & Systems Development Degree",
+                badge: "Software Engineering & AI",
+                items: techEduEn,
               },
             ];
 
       return (
         <div class="profile-block edu-grid" data-for-profile={pid}>
-          {groups.map((grp) => (
-            <div class="edu-card">
-              <div class="edu-card-header">
-                <h3>{grp.title}</h3>
-                <span class="edu-badge">{grp.badge}</span>
+          <div data-for-lang="pt" class="edu-lang-wrapper">
+            {groupsPt.map((grp) => (
+              <div class="edu-card">
+                <div class="edu-card-header">
+                  <h3>{grp.title}</h3>
+                  <span class="edu-badge">{grp.badge}</span>
+                </div>
+                <ul class="edu-list">
+                  {grp.items.map((ed) => (
+                    <li>
+                      <span class="edu-year">{ed.year}</span>
+                      <div>
+                        <strong>{ed.degree}</strong>
+                        <p>{ed.school}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul class="edu-list">
-                {grp.items.map((ed) => (
+            ))}
+
+            <div class="edu-card edu-languages">
+              <div class="edu-card-header">
+                <h3>{i18n.pt.languagesTitle}</h3>
+                <span class="edu-badge">{i18n.pt.languagesBadge}</span>
+              </div>
+              <ul class="edu-list lang-list">
+                {profile.pt.languages.map((lang) => (
                   <li>
-                    <span class="edu-year">{ed.year}</span>
-                    <div>
-                      <strong>{ed.degree}</strong>
-                      <p>{ed.school}</p>
-                    </div>
+                    <strong>{lang.language}</strong>
+                    <p>{lang.level}</p>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
+          </div>
 
-          <div class="edu-card edu-languages">
-            <div class="edu-card-header">
-              <h3>Idiomas</h3>
-              <span class="edu-badge">Certificação Internacional</span>
+          <div data-for-lang="en" class="edu-lang-wrapper">
+            {groupsEn.map((grp) => (
+              <div class="edu-card">
+                <div class="edu-card-header">
+                  <h3>{grp.title}</h3>
+                  <span class="edu-badge">{grp.badge}</span>
+                </div>
+                <ul class="edu-list">
+                  {grp.items.map((ed) => (
+                    <li>
+                      <span class="edu-year">{ed.year}</span>
+                      <div>
+                        <strong>{ed.degree}</strong>
+                        <p>{ed.school}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            <div class="edu-card edu-languages">
+              <div class="edu-card-header">
+                <h3>{i18n.en.languagesTitle}</h3>
+                <span class="edu-badge">{i18n.en.languagesBadge}</span>
+              </div>
+              <ul class="edu-list lang-list">
+                {profile.en.languages.map((lang) => (
+                  <li>
+                    <strong>{lang.language}</strong>
+                    <p>{lang.level}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul class="edu-list lang-list">
-              {profile.languages.map((lang) => (
-                <li>
-                  <strong>{lang.language}</strong>
-                  <p>{lang.level}</p>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       );
     })
   }
 
-  <h2 class="sub" id="skills">Competências Técnicas</h2>
+  <h2 class="sub" id="skills">
+    <span data-for-lang="pt">{i18n.pt.skillsTitle}</span>
+    <span data-for-lang="en">{i18n.en.skillsTitle}</span>
+  </h2>
 
   {
     profileIds.map((pid) => (
-      <div class="profile-block skills" data-for-profile={pid}>
-        {skills[pid].map((group) => (
-          <div class="skill-group">
-            <div class="skill-group-header">
-              <h3>{group.group}</h3>
-              <span class="skill-badge">{group.badge}</span>
+      <div class="profile-block skills-container" data-for-profile={pid}>
+        <div data-for-lang="pt" class="skills">
+          {skills.pt[pid].map((group) => (
+            <div class="skill-group">
+              <div class="skill-group-header">
+                <h3>{group.group}</h3>
+                <span class="skill-badge">{group.badge}</span>
+              </div>
+              <ul class="tags">
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
             </div>
-            <ul class="tags">
-              {group.items.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div data-for-lang="en" class="skills">
+          {skills.en[pid].map((group) => (
+            <div class="skill-group">
+              <div class="skill-group-header">
+                <h3>{group.group}</h3>
+                <span class="skill-badge">{group.badge}</span>
+              </div>
+              <ul class="tags">
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     ))
   }

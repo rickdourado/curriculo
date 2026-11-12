@@ -1,12 +1,20 @@
 ---
 import profile from "../../data/profile.json";
+import i18n from "../../data/i18n.json";
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <section class="section contact" id="contact">
-  <h2>{profile.contact.title}</h2>
-  <p>{profile.contact.text}</p>
+  <div data-for-lang="pt">
+    <h2>{profile.pt.contact.title}</h2>
+    <p>{profile.pt.contact.text}</p>
+  </div>
+  <div data-for-lang="en">
+    <h2>{profile.en.contact.title}</h2>
+    <p>{profile.en.contact.text}</p>
+  </div>
+
   <div class="ctas">
     <a class="btn primary" href={`mailto:${profile.email}`}>{profile.email}</a>
     <a class="btn" href={`tel:${profile.phone.replace(/\s+/g, "")}`}>{profile.phone}</a>
@@ -18,8 +26,9 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
       ))
     }
   </div>
-  <div class="contact-pdfs">
-    <span>Versões em PDF para download direto:</span>
+
+  <div class="contact-pdfs" data-for-lang="pt">
+    <span>{i18n.pt.pdfFooterLabel}</span>
     <a href={`${baseUrl}/cv-arquivista.pdf`} download="Patrick-Ribeiro-Curriculo-Arquivista-Senior.pdf">
       CV Arquivista Sênior
     </a>
@@ -29,7 +38,22 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
     </a>
     <span aria-hidden="true">·</span>
     <a href={`${baseUrl}/cv.pdf`} download="Patrick-Ribeiro-Curriculo-Unificado.pdf">
-      CV Unificado
+      CV Completo Unificado
+    </a>
+  </div>
+
+  <div class="contact-pdfs" data-for-lang="en">
+    <span>{i18n.en.pdfFooterLabel}</span>
+    <a href={`${baseUrl}/cv-arquivista-en.pdf`} download="Patrick-Ribeiro-Resume-Senior-Archivist.pdf">
+      Senior Archivist Resume
+    </a>
+    <span aria-hidden="true">·</span>
+    <a href={`${baseUrl}/cv-dev-python-en.pdf`} download="Patrick-Ribeiro-Resume-Python-AI-Dev.pdf">
+      Python & AI Dev Resume
+    </a>
+    <span aria-hidden="true">·</span>
+    <a href={`${baseUrl}/cv-en.pdf`} download="Patrick-Ribeiro-Resume-Unified.pdf">
+      Full Unified Resume
     </a>
   </div>
 </section>

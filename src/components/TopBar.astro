@@ -1,18 +1,17 @@
 ---
 import profile from "../../data/profile.json";
+import i18n from "../../data/i18n.json";
 
-const nav = [
-  { href: "#work", label: "Destaques" },
-  { href: "#experience", label: "Experiência" },
-  { href: "#skills", label: "Competências" },
-  { href: "#projects", label: "Projetos" },
-  { href: "#contact", label: "Contato" },
+const profilesPt = [
+  profile.pt.profiles.unificado,
+  profile.pt.profiles.arquivista,
+  profile.pt.profiles.dev,
 ];
 
-const profiles = [
-  profile.profiles.unificado,
-  profile.profiles.arquivista,
-  profile.profiles.dev,
+const profilesEn = [
+  profile.en.profiles.unificado,
+  profile.en.profiles.arquivista,
+  profile.en.profiles.dev,
 ];
 ---
 
@@ -22,29 +21,64 @@ const profiles = [
     <span class="short">{profile.initials}</span>
   </a>
 
-  <div class="topbar-switcher" role="group" aria-label="Alternar perfil profissional">
+  <div class="topbar-switcher" role="group" aria-label="Alternar perfil profissional / Switch professional profile">
     {
-      profiles.map((p) => (
-        <button
-          type="button"
-          class="topbar-pill"
-          data-set-profile={p.id}
-          aria-pressed={p.id === "unificado" ? "true" : "false"}
-        >
-          {p.shortLabel}
-        </button>
-      ))
+      profilesPt.map((p, idx) => {
+        const pEn = profilesEn[idx];
+        return (
+          <button
+            type="button"
+            class="topbar-pill"
+            data-set-profile={p.id}
+            aria-pressed={p.id === "unificado" ? "true" : "false"}
+          >
+            <span data-for-lang="pt">{p.shortLabel}</span>
+            <span data-for-lang="en">{pEn.shortLabel}</span>
+          </button>
+        );
+      })
     }
   </div>
 
-  <nav aria-label="Navegação principal">
-    {nav.map((link) => <a href={link.href}>{link.label}</a>)}
-  </nav>
+  <div class="topbar-right">
+    <nav class="topbar-nav" aria-label="Navegação principal">
+      <div data-for-lang="pt" class="nav-links">
+        {i18n.pt.nav.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+      <div data-for-lang="en" class="nav-links">
+        {i18n.en.nav.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </nav>
+
+    <div class="topbar-divider" aria-hidden="true"></div>
+
+    <div class="lang-switcher" role="group" aria-label="Seletor de idioma / Language selector">
+      <button
+        type="button"
+        class="lang-btn active"
+        data-set-lang="pt"
+        aria-label="Português (Brasil)"
+        aria-pressed="true"
+      >
+        PT
+      </button>
+      <button
+        type="button"
+        class="lang-btn"
+        data-set-lang="en"
+        aria-label="English"
+        aria-pressed="false"
+      >
+        EN
+      </button>
+    </div>
+  </div>
 </header>
 
 <script>
   const topbar = document.querySelector(".topbar");
-  const markScrolled = () => topbar?.classList.toggle("scrolled", window.scrollY > window.innerHeight * 0.25);
+  const markScrolled = () =>
+    topbar?.classList.toggle("scrolled", window.scrollY > window.innerHeight * 0.25);
   window.addEventListener("scroll", markScrolled, { passive: true });
   markScrolled();
 </script>

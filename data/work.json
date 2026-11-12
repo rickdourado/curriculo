@@ -1,73 +1,146 @@
 {
-  "stats": {
-    "unificado": [
-      { "value": "17 anos", "label": "em Gestão Documental, Preservação Digital, RDC-Arq e Organização de Acervos" },
-      { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Automação Documental e IA Aplicada" },
-      { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ) + 2 Bacharelados (UNIRIO e Estácio)" }
-    ],
-    "arquivista": [
-      { "value": "17 anos", "label": "de atuação em Gestão de Documentos Eletrônicos, Preservação Digital e Acervos" },
-      { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" }
-    ],
-    "dev": [
-      { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Flask, Automação e IA Aplicada" },
-      { "value": "Tecnológo", "label": "em Análise e Desenvolvimento de Sistemas (Estácio de Sá)" }
-      
+  "pt": {
+    "sectionTitle": {
+      "unificado": "Destaques de Atuação",
+      "arquivista": "Destaques em Gestão Documental & Automação",
+      "dev": "Destaques em Engenharia de Software & IA"
+    },
+    "stats": {
+      "unificado": [
+        { "value": "17 anos", "label": "em Gestão Documental, Preservação Digital, RDC-Arq e Organização de Acervos" },
+        { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Automação Documental e IA Aplicada" },
+        { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ) + 2 Bacharelados (UNIRIO e Estácio)" }
+      ],
+      "arquivista": [
+        { "value": "17 anos", "label": "de atuação em Gestão de Documentos Eletrônicos, Preservação Digital e Acervos" },
+        { "value": "Doutor e Mestre", "label": "em Ciência da Informação (IBICT/UFRJ), Especialista FIOCRUZ e Bel. UNIRIO" }
+      ],
+      "dev": [
+        { "value": "6 anos", "label": "em Desenvolvimento Python, FastAPI, Flask, Automação e IA Aplicada" },
+        { "value": "Tecnólogo", "label": "em Análise e Desenvolvimento de Sistemas (Estácio de Sá)" }
+      ]
+    },
+    "caseStudies": [
+      {
+        "id": "lgpd-redaction",
+        "profiles": ["unificado", "arquivista", "dev"],
+        "order": { "unificado": 1, "arquivista": 1, "dev": 1 },
+        "company": "Prefeitura da Cidade do Rio de Janeiro",
+        "year": "2025 – 2026",
+        "title": "Motor de Anonimização (Redaction) de Contratos com Visão Computacional e LGPD",
+        "problem": "Necessidade de proteger dados pessoais e sigilosos (CPF, CNPJ, nomes) em contratos e documentos administrativos em PDF, garantindo estrita conformidade com a LGPD.",
+        "approach": "União do conhecimento arquivístico de sigilo documental à arquitetura de segurança zero-trust em Python, combinando processamento offline de PDFs com a API Google Gemini 2.5 Flash Vision.",
+        "result": "Sistema automatizado de análise de contratos e anonimização precisa de informações sensíveis em documentos públicos, unindo governança arquivística e IA de ponta.",
+        "tags": ["Python", "Google Gemini 2.5 Flash Vision", "LGPD", "Sigilo Documental", "Visão Computacional", "Zero-Trust", "PyMuPDF"]
+      },
+      {
+        "id": "sei-rag-chatbot",
+        "profiles": ["unificado", "dev", "arquivista"],
+        "order": { "unificado": 2, "arquivista": 3, "dev": 2 },
+        "company": "Prefeitura da Cidade do Rio de Janeiro",
+        "year": "2025 – 2026",
+        "title": "Chatbot Institucional do SEI com Arquitetura RAG e Base de Conhecimento Oficial",
+        "problem": "Servidores públicos precisavam consultar rapidamente normas e fluxos do manual oficial de gestão processual do Sistema Eletrônico de Informações (SEI) com alta precisão e acessibilidade.",
+        "approach": "Estruturação da base de conhecimento com 72 seções do manual oficial (11.395 palavras processadas) em arquitetura RAG integrada ao Google Gemini API, com interface leve em HTML5/CSS3/JS puro.",
+        "result": "Suporte imediato e preciso à gestão processual com carregamento abaixo de 1 segundo e conformidade de acessibilidade WCAG 2.1 AA.",
+        "tags": ["Python", "RAG", "Google Gemini API", "SEI", "Gestão Processual", "HTML5/CSS3/JS", "WCAG 2.1 AA"]
+      },
+      {
+        "id": "rdc-arq-petrobras-jae",
+        "profiles": ["unificado", "arquivista", "dev"],
+        "order": { "unificado": 3, "arquivista": 2, "dev": 4 },
+        "company": "Petrobras (via Rivic), Safe Conversão Digital & Jaé",
+        "year": "2022 – 2025",
+        "title": "Instrumentos Arquivísticos, Sistemas RDC-Arq e Automação Documental em Larga Escala",
+        "problem": "Demanda por conformidade normativa (RDC-Arq), criação de instrumentos de gestão documental e tratamento automatizado de grandes acervos digitais em operações críticas.",
+        "approach": "Elaboração de Planos de Classificação, Tabelas de Temporalidade e Padrões de Metadados aliada ao desenvolvimento em Python e .NET de geradores de metadados, análise de CSV e separação de PDFs via OCR (Tesseract) e Fuzzy Matching.",
+        "result": "Governança documental completa combinada à automação da inserção de papel timbrado, renomeação padronizada em massa, controle de conformidade em Power BI e relatórios automáticos de pendências.",
+        "tags": ["RDC-Arq", "Plano de Classificação", "Tabela de Temporalidade", "Preservação Digital", "Python", "OCR & FuzzyWuzzy", "Power BI"]
+      },
+      {
+        "id": "patrimonio-unesco-fiocruz",
+        "profiles": ["unificado", "arquivista"],
+        "order": { "unificado": 4, "arquivista": 4, "dev": 5 },
+        "company": "IPHAN, UNESCO, FIOCRUZ, Casa Civil-RJ & ANATEL",
+        "year": "2009 – 2021",
+        "title": "Gestão Documental, Preservação de Acervos e Mapeamento de Processos em Instituições de Referência",
+        "problem": "Organizar acervos históricos e institucionais complexos, definir políticas de preservação e especificar requisitos para modernização de sistemas de gestão do processo digital.",
+        "approach": "Desenvolvimento de Quadros de Arranjo, Vocabulários Controlados, Planos de Classificação, Tabelas de Temporalidade e Planos de Descarte, além de mapeamento de processos (BPM/BizAgi) e levantamento de requisitos funcionais.",
+        "result": "Instrumentos arquivísticos e requisitos de sistemas consolidados para o Centro Lúcio Costa (IPHAN/UNESCO), FIOCRUZ, Casa Civil-RJ, ANATEL, CASNAV e ECAD.",
+        "tags": ["Gestão Documental", "Quadro de Arranjo", "Vocabulário Controlado", "BPM / BizAgi", "Requisitos de Sistema", "UNESCO / IPHAN", "FIOCRUZ"]
+      }
     ]
   },
-  "sectionTitle": {
-    "unificado": "Destaques de Atuação",
-    "arquivista": "Destaques em Gestão Documental & Automação",
-    "dev": "Destaques em Engenharia de Software & IA"
-  },
-  "caseStudies": [
-    {
-      "id": "lgpd-redaction",
-      "profiles": ["unificado", "arquivista", "dev"],
-      "order": { "unificado": 1, "arquivista": 1, "dev": 1 },
-      "company": "Prefeitura da Cidade do Rio de Janeiro",
-      "year": "2025 – 2026",
-      "title": "Motor de Anonimização (Redaction) de Contratos com Visão Computacional e LGPD",
-      "problem": "Necessidade de proteger dados pessoais e sigilosos (CPF, CNPJ, nomes) em contratos e documentos administrativos em PDF, garantindo estrita conformidade com a LGPD.",
-      "approach": "União do conhecimento arquivístico de sigilo documental à arquitetura de segurança zero-trust em Python, combinando processamento offline de PDFs com a API Google Gemini 2.5 Flash Vision.",
-      "result": "Sistema automatizado de análise de contratos e anonimização precisa de informações sensíveis em documentos públicos, unindo governança arquivística e IA de ponta.",
-      "tags": ["Python", "Google Gemini 2.5 Flash Vision", "LGPD", "Sigilo Documental", "Visão Computacional", "Zero-Trust", "PyMuPDF"]
+  "en": {
+    "sectionTitle": {
+      "unificado": "Featured Work & Highlights",
+      "arquivista": "Highlights in Records Management & Automation",
+      "dev": "Highlights in Software Engineering & AI"
     },
-    {
-      "id": "sei-rag-chatbot",
-      "profiles": ["unificado", "dev", "arquivista"],
-      "order": { "unificado": 2, "arquivista": 3, "dev": 2 },
-      "company": "Prefeitura da Cidade do Rio de Janeiro",
-      "year": "2025 – 2026",
-      "title": "Chatbot Institucional do SEI com Arquitetura RAG e Base de Conhecimento Oficial",
-      "problem": "Servidores públicos precisavam consultar rapidamente normas e fluxos do manual oficial de gestão processual do Sistema Eletrônico de Informações (SEI) com alta precisão e acessibilidade.",
-      "approach": "Estruturação da base de conhecimento com 72 seções do manual oficial (11.395 palavras processadas) em arquitetura RAG integrada ao Google Gemini API, com interface leve em HTML5/CSS3/JS puro.",
-      "result": "Suporte imediato e preciso à gestão processual com carregamento abaixo de 1 segundo e conformidade de acessibilidade WCAG 2.1 AA.",
-      "tags": ["Python", "RAG", "Google Gemini API", "SEI", "Gestão Processual", "HTML5/CSS3/JS", "WCAG 2.1 AA"]
+    "stats": {
+      "unificado": [
+        { "value": "17 years", "label": "in Electronic Records Management, Digital Preservation & Trusted Repositories (RDC-Arq)" },
+        { "value": "6 years", "label": "in Python Development, FastAPI, Document Automation & Applied AI Systems" },
+        { "value": "Ph.D. & M.Sc.", "label": "in Information Science (IBICT/UFRJ) + 2 Higher Education Degrees" }
+      ],
+      "arquivista": [
+        { "value": "17 years", "label": "in Electronic Records Management, Digital Preservation & Historic Collections" },
+        { "value": "Ph.D. & M.Sc.", "label": "in Information Science (IBICT/UFRJ), FIOCRUZ Specialist & UNIRIO Bachelor" }
+      ],
+      "dev": [
+        { "value": "6 years", "label": "in Python Development, FastAPI, Flask, Automation & Applied AI" },
+        { "value": "Associate Degree", "label": "in Systems Analysis & Development (Estácio de Sá University)" }
+      ]
     },
-    {
-      "id": "rdc-arq-petrobras-jae",
-      "profiles": ["unificado", "arquivista", "dev"],
-      "order": { "unificado": 3, "arquivista": 2, "dev": 4 },
-      "company": "Petrobras (via Rivic), Safe Conversão Digital & Jaé",
-      "year": "2022 – 2025",
-      "title": "Instrumentos Arquivísticos, Sistemas RDC-Arq e Automação Documental em Larga Escala",
-      "problem": "Demanda por conformidade normativa (RDC-Arq), criação de instrumentos de gestão documental e tratamento automatizado de grandes acervos digitais em operações críticas.",
-      "approach": "Elaboração de Planos de Classificação, Tabelas de Temporalidade e Padrões de Metadados aliada ao desenvolvimento em Python e .NET de geradores de metadados, análise de CSV e separação de PDFs via OCR (Tesseract) e Fuzzy Matching.",
-      "result": "Governança documental completa combinada à automação da inserção de papel timbrado, renomeação padronizada em massa, controle de conformidade em Power BI e relatórios automáticos de pendências.",
-      "tags": ["RDC-Arq", "Plano de Classificação", "Tabela de Temporalidade", "Preservação Digital", "Python", "OCR & FuzzyWuzzy", "Power BI"]
-    },
-    {
-      "id": "patrimonio-unesco-fiocruz",
-      "profiles": ["unificado", "arquivista"],
-      "order": { "unificado": 4, "arquivista": 4, "dev": 5 },
-      "company": "IPHAN, UNESCO, FIOCRUZ, Casa Civil-RJ & ANATEL",
-      "year": "2009 – 2021",
-      "title": "Gestão Documental, Preservação de Acervos e Mapeamento de Processos em Instituições de Referência",
-      "problem": "Organizar acervos históricos e institucionais complexos, definir políticas de preservação e especificar requisitos para modernização de sistemas de gestão do processo digital.",
-      "approach": "Desenvolvimento de Quadros de Arranjo, Vocabulários Controlados, Planos de Classificação, Tabelas de Temporalidade e Planos de Descarte, além de mapeamento de processos (BPM/BizAgi) e levantamento de requisitos funcionais.",
-      "result": "Instrumentos arquivísticos e requisitos de sistemas consolidados para o Centro Lúcio Costa (IPHAN/UNESCO), FIOCRUZ, Casa Civil-RJ, ANATEL, CASNAV e ECAD.",
-      "tags": ["Gestão Documental", "Quadro de Arranjo", "Vocabulário Controlado", "BPM / BizAgi", "Requisitos de Sistema", "UNESCO / IPHAN", "FIOCRUZ"]
-    }
-  ]
+    "caseStudies": [
+      {
+        "id": "lgpd-redaction",
+        "profiles": ["unificado", "arquivista", "dev"],
+        "order": { "unificado": 1, "arquivista": 1, "dev": 1 },
+        "company": "City Government of Rio de Janeiro",
+        "year": "2025 – 2026",
+        "title": "Contract Analysis & Redaction Engine with Computer Vision and LGPD Compliance",
+        "problem": "Strict mandate to safeguard personally identifiable information (PII) and confidential data (tax IDs, corporate IDs, names) in public contracts and administrative PDF files in full compliance with Brazil's General Data Protection Law (LGPD).",
+        "approach": "Integrated deep archival expertise in document confidentiality and access restriction with a zero-trust Python architecture, coupling offline PDF parsing with the Google Gemini 2.5 Flash Vision API.",
+        "result": "Automated contract review pipeline with high-precision sanitization of sensitive data across public administrative files, successfully uniting archival governance with state-of-the-art AI.",
+        "tags": ["Python", "Google Gemini 2.5 Flash Vision", "LGPD", "Document Privacy", "Computer Vision", "Zero-Trust", "PyMuPDF"]
+      },
+      {
+        "id": "sei-rag-chatbot",
+        "profiles": ["unificado", "dev", "arquivista"],
+        "order": { "unificado": 2, "arquivista": 3, "dev": 2 },
+        "company": "City Government of Rio de Janeiro",
+        "year": "2025 – 2026",
+        "title": "Institutional SEI Chatbot with RAG Architecture and Official Knowledge Base",
+        "problem": "Public servants required immediate, highly accurate guidance on procedural regulations and workflows from the official Electronic Information System (SEI) operational manual.",
+        "approach": "Structured the knowledge base across 72 sections of the official operational manual (11,395 words) into a RAG architecture backed by the Google Gemini API, paired with a lightweight vanilla HTML5/CSS3/JS interface.",
+        "result": "Instant, authoritative procedural guidance with sub-second loading time (0.5–1s), reducing bundle size by 95% and achieving full WCAG 2.1 AA accessibility compliance.",
+        "tags": ["Python", "RAG", "Google Gemini API", "SEI", "Workflow Governance", "HTML5/CSS3/JS", "WCAG 2.1 AA"]
+      },
+      {
+        "id": "rdc-arq-petrobras-jae",
+        "profiles": ["unificado", "arquivista", "dev"],
+        "order": { "unificado": 3, "arquivista": 2, "dev": 4 },
+        "company": "Petrobras (via Rivic), Safe Digital Conversion & Jaé",
+        "year": "2022 – 2025",
+        "title": "Archival Governance Instruments, Trusted Digital Repositories (RDC-Arq), and Large-Scale Automation",
+        "problem": "Regulatory compliance requirements (RDC-Arq standards), authoring institutional retention schedules, and automating the high-volume ingestion and processing of digital archives.",
+        "approach": "Authored Classification Plans, Retention Schedules, and Metadata Standards; engineered Python and .NET pipelines for automated metadata extraction, batch letterhead insertion, CSV reconciliation, and OCR-driven document splitting.",
+        "result": "Comprehensive archival governance coupled with automated mass renaming, automated compliance validation dashboards in Power BI, and batch reconciliation.",
+        "tags": ["RDC-Arq", "Classification Plan", "Retention Schedule", "Digital Preservation", "Python", "OCR & FuzzyWuzzy", "Power BI"]
+      },
+      {
+        "id": "patrimonio-unesco-fiocruz",
+        "profiles": ["unificado", "arquivista"],
+        "order": { "unificado": 4, "arquivista": 4, "dev": 5 },
+        "company": "IPHAN, UNESCO, FIOCRUZ, State Chief of Staff & ANATEL",
+        "year": "2009 – 2021",
+        "title": "Records Management, Cultural Heritage Preservation, and BPM Across Premier Institutions",
+        "problem": "Structuring complex institutional and historic heritage collections, establishing long-term preservation policies, and defining functional requirements for administrative workflow digitization.",
+        "approach": "Developed Classification Schemes, Controlled Vocabularies, Retention Schedules, and Disposal Plans; executed business process modeling (BPM/BizAgi) and specified functional system requirements.",
+        "result": "Standardized archival instruments and system specifications delivered to the Lúcio Costa Center (IPHAN/UNESCO), FIOCRUZ, State Chief of Staff, ANATEL, CASNAV, and ECAD.",
+        "tags": ["Records Management", "Arrangement Plan", "Controlled Vocabulary", "BPM / BizAgi", "System Requirements", "UNESCO / IPHAN", "FIOCRUZ"]
+      }
+    ]
+  }
 }
